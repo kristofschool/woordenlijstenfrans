@@ -1,0 +1,66 @@
+{
+  "id": "contact-11",
+  "name": "Contact 11",
+  "cards": [
+    {
+      "fr": "un carrefour",
+      "nl": "een kruispunt"
+    },
+    {
+      "fr": "les feux",
+      "nl": "de verkeerslichten"
+    },
+    {
+      "fr": "un rond-point",
+      "nl": "een rotonde"
+    },
+    {
+      "fr": "une rue",
+      "nl": "een straat"
+    },
+    {
+      "fr": "chercher",
+      "nl": "zoeken"
+    },
+    {
+      "fr": "continuer",
+      "nl": "verdergaan"
+    },
+    {
+      "fr": "tourner",
+      "nl": "afslaan, draaien"
+    },
+    {
+      "fr": "traverser",
+      "nl": "oversteken"
+    },
+    {
+      "fr": "après",
+      "nl": "daarna"
+    },
+    {
+      "fr": "chez",
+      "nl": "bij, naar"
+    },
+    {
+      "fr": "deuxième",
+      "nl": "tweede"
+    },
+    {
+      "fr": "jusque",
+      "nl": "tot"
+    },
+    {
+      "fr": "loin",
+      "nl": "ver"
+    },
+    {
+      "fr": "premier, première",
+      "nl": "eerste"
+    },
+    {
+      "fr": "tout droit",
+      "nl": "rechtdoor"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "id": "contact-16",
+  "name": "Contact 16",
+  "cards": [
+    {
+      "fr": "un devoir",
+      "nl": "een huiswerk"
+    },
+    {
+      "fr": "un examen",
+      "nl": "een examen"
+    },
+    {
+      "fr": "un exercice",
+      "nl": "een oefening"
+    },
+    {
+      "fr": "les informations",
+      "nl": "het nieuws"
+    },
+    {
+      "fr": "la météo",
+      "nl": "het weerbericht"
+    },
+    {
+      "fr": "arrêter",
+      "nl": "stoppen"
+    },
+    {
+      "fr": "commencer",
+      "nl": "beginnen"
+    },
+    {
+      "fr": "écouter",
+      "nl": "luisteren (naar)"
+    },
+    {
+      "fr": "voir",
+      "nl": "zien, kijken"
+    },
+    {
+      "fr": "amusant(e)",
+      "nl": "plezant"
+    },
+    {
+      "fr": "aujourd’hui",
+      "nl": "vandaag"
+    },
+    {
+      "fr": "ce, cet, cette, ces",
+      "nl": "dit, die, deze"
+    },
+    {
+      "fr": "ceci",
+      "nl": "dit"
+    },
+    {
+      "fr": "cela",
+      "nl": "dat"
+    },
+    {
+      "fr": "tôt",
+      "nl": "vroeg"
+    },
+    {
+      "fr": "trop",
+      "nl": "te"
+    },
+    {
+      "fr": "lundi",
+      "nl": "maandag"
+    },
+    {
+      "fr": "mardi",
+      "nl": "dinsdag"
+    },
+    {
+      "fr": "mercredi",
+      "nl": "woensdag"
+    },
+    {
+      "fr": "jeudi",
+      "nl": "donderdag"
+    },
+    {
+      "fr": "vendredi",
+      "nl": "vrijdag"
+    },
+    {
+      "fr": "samedi",
+      "nl": "zaterdag"
+    },
+    {
+      "fr": "dimanche",
+      "nl": "zondag"
+    }
+  ]
+}

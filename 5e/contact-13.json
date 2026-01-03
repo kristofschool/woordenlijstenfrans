@@ -1,0 +1,102 @@
+{
+  "id": "contact-13",
+  "name": "Contact 13",
+  "cards": [
+    {
+      "fr": "la campagne",
+      "nl": "het platteland"
+    },
+    {
+      "fr": "une cave",
+      "nl": "een kelder"
+    },
+    {
+      "fr": "une chambre",
+      "nl": "een kamer"
+    },
+    {
+      "fr": "une cuisine",
+      "nl": "een keuken"
+    },
+    {
+      "fr": "un escalier",
+      "nl": "een trap"
+    },
+    {
+      "fr": "un hall / une entrée",
+      "nl": "een hal"
+    },
+    {
+      "fr": "un numéro",
+      "nl": "een nummer"
+    },
+    {
+      "fr": "les parents",
+      "nl": "de ouders"
+    },
+    {
+      "fr": "une pièce",
+      "nl": "een kamer, ruimte"
+    },
+    {
+      "fr": "une porte",
+      "nl": "een deur"
+    },
+    {
+      "fr": "une salle de bains",
+      "nl": "een badkamer"
+    },
+    {
+      "fr": "les toilettes",
+      "nl": "het toilet"
+    },
+    {
+      "fr": "une vie",
+      "nl": "een leven"
+    },
+    {
+      "fr": "une ville",
+      "nl": "een stad"
+    },
+    {
+      "fr": "entrer",
+      "nl": "binnengaan"
+    },
+    {
+      "fr": "montrer",
+      "nl": "tonen"
+    },
+    {
+      "fr": "préférer",
+      "nl": "verkiezen"
+    },
+    {
+      "fr": "vivre",
+      "nl": "leven"
+    },
+    {
+      "fr": "en bas",
+      "nl": "beneden"
+    },
+    {
+      "fr": "en haut",
+      "nl": "boven"
+    },
+    {
+      "fr": "pratique",
+      "nl": "praktisch"
+    },
+    {
+      "fr": "mes (+ mv.)",
+      "nl": "mijn"
+    },
+    {
+      "fr": "tes (+ mv.)",
+      "nl": "jouw, je"
+    },
+    {
+      "fr": "ses (+ mv.)",
+      "nl": "zijn, haar"
+    }
+  ]
+}

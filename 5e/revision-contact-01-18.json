@@ -1,0 +1,1902 @@
+{
+  "id": "revision-contact-01-18",
+  "name": "Revision Contact 1–18",
+  "cards": [
+    {
+      "fr": "à",
+      "nl": "tot, naar"
+    },
+    {
+      "fr": "à côté de",
+      "nl": "naast"
+    },
+    {
+      "fr": "adorer",
+      "nl": "dol zijn op"
+    },
+    {
+      "fr": "un âge",
+      "nl": "een leeftijd"
+    },
+    {
+      "fr": "aider",
+      "nl": "helpen"
+    },
+    {
+      "fr": "aimer",
+      "nl": "houden van"
+    },
+    {
+      "fr": "l'Allemagne",
+      "nl": "Duitsland"
+    },
+    {
+      "fr": "aller",
+      "nl": "gaan"
+    },
+    {
+      "fr": "alors",
+      "nl": "dan"
+    },
+    {
+      "fr": "les Alpes",
+      "nl": "de Alpen"
+    },
+    {
+      "fr": "un ami",
+      "nl": "een vriend"
+    },
+    {
+      "fr": "une amie",
+      "nl": "een vriendin"
+    },
+    {
+      "fr": "amusant(e)",
+      "nl": "plezant"
+    },
+    {
+      "fr": "s' amuser",
+      "nl": "zich amuseren"
+    },
+    {
+      "fr": "un an",
+      "nl": "een jaar"
+    },
+    {
+      "fr": "un animal (des an",
+      "nl": "nimaux) een dier (dieren)"
+    },
+    {
+      "fr": "un anniversaire",
+      "nl": "een verjaardag"
+    },
+    {
+      "fr": "annoncer",
+      "nl": "aankondigen"
+    },
+    {
+      "fr": "un appartement",
+      "nl": "een appartement"
+    },
+    {
+      "fr": "un appareil",
+      "nl": "een (telefoon)toestel"
+    },
+    {
+      "fr": "-> Qui est à l'~ ?",
+      "nl": "Met wie spreek ik?"
+    },
+    {
+      "fr": "s' appeler",
+      "nl": "heten"
+    },
+    {
+      "fr": "appétit : bon app",
+      "nl": "pétit smakelijk"
+    },
+    {
+      "fr": "après",
+      "nl": "(daar)na"
+    },
+    {
+      "fr": "les Ardennes",
+      "nl": "de Ardennen"
+    },
+    {
+      "fr": "arrêter",
+      "nl": "stoppen"
+    },
+    {
+      "fr": "un article",
+      "nl": "een artikel"
+    },
+    {
+      "fr": "une assiette",
+      "nl": "een bord"
+    },
+    {
+      "fr": "aujourd'hui",
+      "nl": "vandaag"
+    },
+    {
+      "fr": "aussi",
+      "nl": "ook"
+    },
+    {
+      "fr": "avec",
+      "nl": "met"
+    },
+    {
+      "fr": "un avion",
+      "nl": "een vliegtuig"
+    },
+    {
+      "fr": "avoir",
+      "nl": "hebben"
+    },
+    {
+      "fr": "une baguette",
+      "nl": "een stokbrood"
+    },
+    {
+      "fr": "une balle",
+      "nl": "een bal"
+    },
+    {
+      "fr": "bas : en bas",
+      "nl": "beneden"
+    },
+    {
+      "fr": "beau, belle",
+      "nl": "mooi"
+    },
+    {
+      "fr": "beaucoup",
+      "nl": "veel"
+    },
+    {
+      "fr": "la Belgique",
+      "nl": "België"
+    },
+    {
+      "fr": "besoin : avoir ~ de",
+      "nl": "e * nodig hebben"
+    },
+    {
+      "fr": "s - Nederland",
+      "nl": "ds"
+    },
+    {
+      "fr": "le beurre",
+      "nl": "de boter"
+    },
+    {
+      "fr": "bien",
+      "nl": "goed"
+    },
+    {
+      "fr": "bien sûr",
+      "nl": "zeker, natuurlijk"
+    },
+    {
+      "fr": "bientôt",
+      "nl": "binnenkort"
+    },
+    {
+      "fr": "blanc, blanche",
+      "nl": "wit"
+    },
+    {
+      "fr": "bleu(e)",
+      "nl": "blauw"
+    },
+    {
+      "fr": "blond(e)",
+      "nl": "blond"
+    },
+    {
+      "fr": "boire",
+      "nl": "drinken"
+    },
+    {
+      "fr": "un bois",
+      "nl": "een bos"
+    },
+    {
+      "fr": "une boisson",
+      "nl": "een drank"
+    },
+    {
+      "fr": "bon, bonne",
+      "nl": "goed"
+    },
+    {
+      "fr": "bonjour",
+      "nl": "goedendag"
+    },
+    {
+      "fr": "un boucher",
+      "nl": "een slager"
+    },
+    {
+      "fr": "un boulanger",
+      "nl": "een bakker"
+    },
+    {
+      "fr": "une bouteille",
+      "nl": "een fles"
+    },
+    {
+      "fr": "une brique * (de lait)",
+      "nl": "een pak (melk)"
+    },
+    {
+      "fr": "brun(e)",
+      "nl": "bruin"
+    },
+    {
+      "fr": "un bureau",
+      "nl": "een werkkamer"
+    },
+    {
+      "fr": "un bus",
+      "nl": "een bureau (meubel)"
+    },
+    {
+      "fr": "un cadeau",
+      "nl": "een bus"
+    },
+    {
+      "fr": "le café",
+      "nl": "een geschenk"
+    },
+    {
+      "fr": "un cahier",
+      "nl": "de koffie"
+    },
+    {
+      "fr": "la campagne",
+      "nl": "een schrift"
+    },
+    {
+      "fr": "un carrefour",
+      "nl": "het platteland"
+    },
+    {
+      "fr": "une cave*",
+      "nl": "een kruispunt"
+    },
+    {
+      "fr": "un CD",
+      "nl": "een kelder"
+    },
+    {
+      "fr": "ceci",
+      "nl": "een cd"
+    },
+    {
+      "fr": "cela",
+      "nl": "dit"
+    },
+    {
+      "fr": "un cent",
+      "nl": "dat"
+    },
+    {
+      "fr": "ce(t) – cette – ces",
+      "nl": "een cent"
+    },
+    {
+      "fr": "c'est",
+      "nl": "die, dat, deze"
+    },
+    {
+      "fr": "une chaise",
+      "nl": "het is"
+    },
+    {
+      "fr": "une chambre",
+      "nl": "een stoel"
+    },
+    {
+      "fr": "une chance",
+      "nl": "een kamer"
+    },
+    {
+      "fr": "chaque",
+      "nl": "een geluk, een kans"
+    },
+    {
+      "fr": "un chariot",
+      "nl": "elk(e), ieder(e)"
+    },
+    {
+      "fr": "un chat",
+      "nl": "een winkelkarretje"
+    },
+    {
+      "fr": "chaud(e)",
+      "nl": "een kat"
+    },
+    {
+      "fr": "chercher",
+      "nl": "warm"
+    },
+    {
+      "fr": "un cheval (des che",
+      "nl": "evaux) een paard (paarden)"
+    },
+    {
+      "fr": "un cheveu (des ch",
+      "nl": "heveux) een haar (haren)"
+    },
+    {
+      "fr": "chez",
+      "nl": "bij, naar"
+    },
+    {
+      "fr": "un chicon",
+      "nl": "een stronk witloof"
+    },
+    {
+      "fr": "un chien",
+      "nl": "een hond"
+    },
+    {
+      "fr": "chouette",
+      "nl": "tof, lief"
+    },
+    {
+      "fr": "un cinéma",
+      "nl": "een bioscoop"
+    },
+    {
+      "fr": "cinq",
+      "nl": "vijf"
+    },
+    {
+      "fr": "cinquante",
+      "nl": "vijftig"
+    },
+    {
+      "fr": "cinquième",
+      "nl": "vijfde"
+    },
+    {
+      "fr": "une classe",
+      "nl": "een klas, een leerjaar"
+    },
+    {
+      "fr": "un coca",
+      "nl": "een cola"
+    },
+    {
+      "fr": "combien",
+      "nl": "hoeveel"
+    },
+    {
+      "fr": "comme",
+      "nl": "(zo)als"
+    },
+    {
+      "fr": "commencer",
+      "nl": "beginnen"
+    },
+    {
+      "fr": "comment",
+      "nl": "hoe"
+    },
+    {
+      "fr": "comprendre",
+      "nl": "begrijpen"
+    },
+    {
+      "fr": "compter",
+      "nl": "tellen"
+    },
+    {
+      "fr": "content(e)",
+      "nl": "tevreden, blij"
+    },
+    {
+      "fr": "continuer",
+      "nl": "verder gaan"
+    },
+    {
+      "fr": "contre",
+      "nl": "tegen"
+    },
+    {
+      "fr": "un copain",
+      "nl": "een vriend"
+    },
+    {
+      "fr": "une copine",
+      "nl": "een vriendin"
+    },
+    {
+      "fr": "une couleur",
+      "nl": "een kleur"
+    },
+    {
+      "fr": "une cour",
+      "nl": "een speelplaats"
+    },
+    {
+      "fr": "courir",
+      "nl": "lopen"
+    },
+    {
+      "fr": "une course",
+      "nl": "een boodschap"
+    },
+    {
+      "fr": "un couteau",
+      "nl": "een mes"
+    },
+    {
+      "fr": "couter",
+      "nl": "kosten"
+    },
+    {
+      "fr": "un croissant",
+      "nl": "een croissant"
+    },
+    {
+      "fr": "une cuisine",
+      "nl": "een keuken"
+    },
+    {
+      "fr": "d'abord",
+      "nl": "eerst"
+    },
+    {
+      "fr": "d'accord",
+      "nl": "akkoord"
+    },
+    {
+      "fr": "dans",
+      "nl": "in"
+    },
+    {
+      "fr": "une danse",
+      "nl": "een dans"
+    },
+    {
+      "fr": "de",
+      "nl": "van"
+    },
+    {
+      "fr": "debout – debout !",
+      "nl": "! * op – opstaan!"
+    },
+    {
+      "fr": "dehors",
+      "nl": "buiten"
+    },
+    {
+      "fr": "déjà",
+      "nl": "al"
+    },
+    {
+      "fr": "demain",
+      "nl": "morgen"
+    },
+    {
+      "fr": "demi(e)",
+      "nl": "half"
+    },
+    {
+      "fr": "un demi-kilo",
+      "nl": "een halve kilo"
+    },
+    {
+      "fr": "depuis",
+      "nl": "sedert"
+    },
+    {
+      "fr": "de rien",
+      "nl": "graag gedaan"
+    },
+    {
+      "fr": "derrière",
+      "nl": "achter"
+    },
+    {
+      "fr": "désirer",
+      "nl": "verlangen, wensen"
+    },
+    {
+      "fr": "détester",
+      "nl": "haten"
+    },
+    {
+      "fr": "deux",
+      "nl": "twee"
+    },
+    {
+      "fr": "deuxième",
+      "nl": "tweede"
+    },
+    {
+      "fr": "devant",
+      "nl": "voor"
+    },
+    {
+      "fr": "un devoir",
+      "nl": "een huiswerk"
+    },
+    {
+      "fr": "devoir : il doit",
+      "nl": "moeten: hij moet"
+    },
+    {
+      "fr": "dimanche",
+      "nl": "zondag"
+    },
+    {
+      "fr": "un diner",
+      "nl": "een avondmaal (Frankrijk)"
+    },
+    {
+      "fr": "e",
+      "nl": "een middagmaal (België)"
+    },
+    {
+      "fr": "dix",
+      "nl": "tien"
+    },
+    {
+      "fr": "dix-huit",
+      "nl": "achttien"
+    },
+    {
+      "fr": "dix-neuf",
+      "nl": "negentien"
+    },
+    {
+      "fr": "dix-sept",
+      "nl": "zeventien"
+    },
+    {
+      "fr": "dormir : il dort",
+      "nl": "slapen: hij slaapt"
+    },
+    {
+      "fr": "un dos",
+      "nl": "een rug"
+    },
+    {
+      "fr": "douze",
+      "nl": "twaalf"
+    },
+    {
+      "fr": "droit(e)",
+      "nl": "rechts"
+    },
+    {
+      "fr": "l'eau",
+      "nl": "het water"
+    },
+    {
+      "fr": "une école",
+      "nl": "een school"
+    },
+    {
+      "fr": "écouter",
+      "nl": "luisteren (naar)"
+    },
+    {
+      "fr": "elle(s)",
+      "nl": "zij, ze"
+    },
+    {
+      "fr": "un e-mail",
+      "nl": "een e-mail"
+    },
+    {
+      "fr": "en (France)",
+      "nl": "in Frankrijk"
+    },
+    {
+      "fr": "en (bus)",
+      "nl": "met (de bus)"
+    },
+    {
+      "fr": "encore",
+      "nl": "nog"
+    },
+    {
+      "fr": "un enfant",
+      "nl": "een kind"
+    },
+    {
+      "fr": "une enfant",
+      "nl": "een kind"
+    },
+    {
+      "fr": "une entrée",
+      "nl": "een ingang, een hal"
+    },
+    {
+      "fr": "entrer",
+      "nl": "binnengaan"
+    },
+    {
+      "fr": "envie : avoir ~ de",
+      "nl": "zin hebben in"
+    },
+    {
+      "fr": "l'Espagne",
+      "nl": "Spanje"
+    },
+    {
+      "fr": "un escalier",
+      "nl": "een trap"
+    },
+    {
+      "fr": "et",
+      "nl": "en"
+    },
+    {
+      "fr": "être",
+      "nl": "zijn"
+    },
+    {
+      "fr": "un euro",
+      "nl": "een euro"
+    },
+    {
+      "fr": "un examen",
+      "nl": "een examen"
+    },
+    {
+      "fr": "un exercice",
+      "nl": "een oefening"
+    },
+    {
+      "fr": "facile",
+      "nl": "gemakkelijk"
+    },
+    {
+      "fr": "faim : avoir ~",
+      "nl": "honger: ~ hebben"
+    },
+    {
+      "fr": "faire",
+      "nl": "doen, maken"
+    },
+    {
+      "fr": "une famille",
+      "nl": "een familie"
+    },
+    {
+      "fr": "un fauteuil",
+      "nl": "een zetel"
+    },
+    {
+      "fr": "une fenêtre",
+      "nl": "een raam"
+    },
+    {
+      "fr": "les feux",
+      "nl": "de verkeerslichten"
+    },
+    {
+      "fr": "la fièvre",
+      "nl": "de koorts"
+    },
+    {
+      "fr": "une fille",
+      "nl": "een meisje"
+    },
+    {
+      "fr": "un film",
+      "nl": "een dochter"
+    },
+    {
+      "fr": "un fils",
+      "nl": "een film"
+    },
+    {
+      "fr": "une fin*",
+      "nl": "een zoon"
+    },
+    {
+      "fr": "une fois",
+      "nl": "een einde"
+    },
+    {
+      "fr": "le foot(ball)",
+      "nl": "een maal, keer"
+    },
+    {
+      "fr": "formidable",
+      "nl": "het voetbal"
+    },
+    {
+      "fr": "une fourchette",
+      "nl": "formidabel, geweldig"
+    },
+    {
+      "fr": "le français",
+      "nl": "een vork"
+    },
+    {
+      "fr": "la France",
+      "nl": "het Frans"
+    },
+    {
+      "fr": "un frère",
+      "nl": "Frankrijk"
+    },
+    {
+      "fr": "froid(e)",
+      "nl": "een broer"
+    },
+    {
+      "fr": "le fromage",
+      "nl": "koud"
+    },
+    {
+      "fr": "un fruit",
+      "nl": "de kaas"
+    },
+    {
+      "fr": "des fruits",
+      "nl": "een stuk fruit"
+    },
+    {
+      "fr": "un garage",
+      "nl": "fruit"
+    },
+    {
+      "fr": "un garçon",
+      "nl": "een garage"
+    },
+    {
+      "fr": "une gare",
+      "nl": "een jongen"
+    },
+    {
+      "fr": "gauche",
+      "nl": "een station"
+    },
+    {
+      "fr": "gentil, gentille",
+      "nl": "links"
+    },
+    {
+      "fr": "une gorge",
+      "nl": "vriendelijk, lief"
+    },
+    {
+      "fr": "grand(e)",
+      "nl": "een keel"
+    },
+    {
+      "fr": "grave",
+      "nl": "groot"
+    },
+    {
+      "fr": "une grippe",
+      "nl": "erg"
+    },
+    {
+      "fr": "un GSM",
+      "nl": "een griep"
+    },
+    {
+      "fr": "habiter",
+      "nl": "een gsm"
+    },
+    {
+      "fr": "un hall",
+      "nl": "wonen"
+    },
+    {
+      "fr": "haut : en haut",
+      "nl": "een hal"
+    },
+    {
+      "fr": "une heure",
+      "nl": "een uur"
+    },
+    {
+      "fr": "-> il est … heure(s)",
+      "nl": "het is … uur"
+    },
+    {
+      "fr": "heureux, heureuse",
+      "nl": "gelukkig"
+    },
+    {
+      "fr": "hier",
+      "nl": "gisteren"
+    },
+    {
+      "fr": "un hôtel",
+      "nl": "een hotel"
+    },
+    {
+      "fr": "huit",
+      "nl": "acht"
+    },
+    {
+      "fr": "ici",
+      "nl": "hier"
+    },
+    {
+      "fr": "il",
+      "nl": "hij"
+    },
+    {
+      "fr": "ils",
+      "nl": "zij, ze"
+    },
+    {
+      "fr": "il y a …",
+      "nl": "er is, er zijn …"
+    },
+    {
+      "fr": "les informations",
+      "nl": "het nieuws"
+    },
+    {
+      "fr": "un instant",
+      "nl": "een ogenblik"
+    },
+    {
+      "fr": "l'Internet",
+      "nl": "het internet"
+    },
+    {
+      "fr": "l'Italie",
+      "nl": "Italië"
+    },
+    {
+      "fr": "un jardin",
+      "nl": "een tuin"
+    },
+    {
+      "fr": "jaune",
+      "nl": "geel"
+    },
+    {
+      "fr": "je ( j')",
+      "nl": "ik"
+    },
+    {
+      "fr": "un jeu (vidéo)",
+      "nl": "een (video)spel, game"
+    },
+    {
+      "fr": "jeudi",
+      "nl": "donderdag"
+    },
+    {
+      "fr": "jeune",
+      "nl": "jong"
+    },
+    {
+      "fr": "un jeune homme",
+      "nl": "een jongeman"
+    },
+    {
+      "fr": "joli(e)",
+      "nl": "mooi"
+    },
+    {
+      "fr": "jouer",
+      "nl": "spelen"
+    },
+    {
+      "fr": "un jour",
+      "nl": "een dag"
+    },
+    {
+      "fr": "joyeux, joyeuse",
+      "nl": "vrolijk"
+    },
+    {
+      "fr": "un jus de fruits",
+      "nl": "een fruitsap"
+    },
+    {
+      "fr": "jusque",
+      "nl": "tot"
+    },
+    {
+      "fr": "un kilo",
+      "nl": "een kilo"
+    },
+    {
+      "fr": "la ( l')",
+      "nl": "de, het"
+    },
+    {
+      "fr": "là",
+      "nl": "daar, er"
+    },
+    {
+      "fr": "là-bas",
+      "nl": "daar"
+    },
+    {
+      "fr": "le lait",
+      "nl": "de melk"
+    },
+    {
+      "fr": "un lapin",
+      "nl": "een konijn"
+    },
+    {
+      "fr": "le ( l')",
+      "nl": "de, het"
+    },
+    {
+      "fr": "un légume",
+      "nl": "een groente"
+    },
+    {
+      "fr": "les",
+      "nl": "de"
+    },
+    {
+      "fr": "libre",
+      "nl": "vrij"
+    },
+    {
+      "fr": "une limonade",
+      "nl": "een limonade"
+    },
+    {
+      "fr": "lire",
+      "nl": "lezen"
+    },
+    {
+      "fr": "une liste",
+      "nl": "een lijst"
+    },
+    {
+      "fr": "une liste des cours",
+      "nl": "ses * een boodschappenlijst"
+    },
+    {
+      "fr": "un lit",
+      "nl": "een bed"
+    },
+    {
+      "fr": "un litre",
+      "nl": "een liter"
+    },
+    {
+      "fr": "un livre",
+      "nl": "een boek"
+    },
+    {
+      "fr": "loin",
+      "nl": "ver"
+    },
+    {
+      "fr": "lundi",
+      "nl": "maandag"
+    },
+    {
+      "fr": "des lunettes",
+      "nl": "een bril"
+    },
+    {
+      "fr": "ma",
+      "nl": "mijn"
+    },
+    {
+      "fr": "madame",
+      "nl": "mevrouw"
+    },
+    {
+      "fr": "mademoiselle",
+      "nl": "juffrouw"
+    },
+    {
+      "fr": "un magasin",
+      "nl": "een winkel"
+    },
+    {
+      "fr": "maintenant",
+      "nl": "nu"
+    },
+    {
+      "fr": "mais",
+      "nl": "maar"
+    },
+    {
+      "fr": "une maison",
+      "nl": "een huis"
+    },
+    {
+      "fr": "un maitre",
+      "nl": "een meester, baasje"
+    },
+    {
+      "fr": "mal / avoir mal",
+      "nl": "slecht / pijn hebben"
+    },
+    {
+      "fr": "malade",
+      "nl": "ziek"
+    },
+    {
+      "fr": "une maman",
+      "nl": "een mama"
+    },
+    {
+      "fr": "manger",
+      "nl": "eten"
+    },
+    {
+      "fr": "mardi",
+      "nl": "dinsdag"
+    },
+    {
+      "fr": "mauvais(e)",
+      "nl": "slecht"
+    },
+    {
+      "fr": "méchant(e)",
+      "nl": "stout"
+    },
+    {
+      "fr": "une mer",
+      "nl": "een zee"
+    },
+    {
+      "fr": "merci",
+      "nl": "dank je (u)"
+    },
+    {
+      "fr": "merci beaucoup",
+      "nl": "hartelijk dank"
+    },
+    {
+      "fr": "merci bien",
+      "nl": "dank je (u) wel, bedankt"
+    },
+    {
+      "fr": "mercredi",
+      "nl": "woensdag"
+    },
+    {
+      "fr": "mes",
+      "nl": "mijn"
+    },
+    {
+      "fr": "la météo",
+      "nl": "het weerbericht"
+    },
+    {
+      "fr": "mettre",
+      "nl": "zetten, plaatsen, leggen"
+    },
+    {
+      "fr": "midi",
+      "nl": "middag"
+    },
+    {
+      "fr": "mille",
+      "nl": "duizend"
+    },
+    {
+      "fr": "une mobylette",
+      "nl": "een bromfiets"
+    },
+    {
+      "fr": "moderne",
+      "nl": "modern"
+    },
+    {
+      "fr": "moi",
+      "nl": "ik, (met) mij"
+    },
+    {
+      "fr": "mon",
+      "nl": "mijn"
+    },
+    {
+      "fr": "un monsieur",
+      "nl": "een meneer"
+    },
+    {
+      "fr": "une montagne",
+      "nl": "een berg"
+    },
+    {
+      "fr": "montrer",
+      "nl": "tonen"
+    },
+    {
+      "fr": "une moto",
+      "nl": "een motor(fiets)"
+    },
+    {
+      "fr": "un mur",
+      "nl": "een muur"
+    },
+    {
+      "fr": "la musique",
+      "nl": "de muziek"
+    },
+    {
+      "fr": "neuf",
+      "nl": "negen"
+    },
+    {
+      "fr": "une niche",
+      "nl": "een hondenhok"
+    },
+    {
+      "fr": "noir(e)",
+      "nl": "zwart"
+    },
+    {
+      "fr": "un nom",
+      "nl": "een naam"
+    },
+    {
+      "fr": "non",
+      "nl": "neen"
+    },
+    {
+      "fr": "nous",
+      "nl": "wij, we"
+    },
+    {
+      "fr": "nouveau, nouvelle",
+      "nl": "nieuw"
+    },
+    {
+      "fr": "un numéro",
+      "nl": "een nummer"
+    },
+    {
+      "fr": "un oiseau",
+      "nl": "een vogel"
+    },
+    {
+      "fr": "on",
+      "nl": "men, we"
+    },
+    {
+      "fr": "onze",
+      "nl": "elf"
+    },
+    {
+      "fr": "une orange",
+      "nl": "een sinaasappel"
+    },
+    {
+      "fr": "un ordinateur",
+      "nl": "een computer"
+    },
+    {
+      "fr": "un (ordinateur) portable",
+      "nl": "een laptop"
+    },
+    {
+      "fr": "une oreille",
+      "nl": "een oor"
+    },
+    {
+      "fr": "ou",
+      "nl": "of"
+    },
+    {
+      "fr": "où",
+      "nl": "waar"
+    },
+    {
+      "fr": "oublier",
+      "nl": "vergeten"
+    },
+    {
+      "fr": "oui",
+      "nl": "ja"
+    },
+    {
+      "fr": "un pain",
+      "nl": "een brood"
+    },
+    {
+      "fr": "un papa",
+      "nl": "een papa"
+    },
+    {
+      "fr": "un paquet",
+      "nl": "een pakje"
+    },
+    {
+      "fr": "pardon",
+      "nl": "excuseer"
+    },
+    {
+      "fr": "par",
+      "nl": "per"
+    },
+    {
+      "fr": "les parents",
+      "nl": "de ouders"
+    },
+    {
+      "fr": "partir",
+      "nl": "vertrekken"
+    },
+    {
+      "fr": "pas : ne … pas",
+      "nl": "niet, geen"
+    },
+    {
+      "fr": "passer",
+      "nl": "doorgeven"
+    },
+    {
+      "fr": "les Pays-Bas",
+      "nl": "Nederland"
+    },
+    {
+      "fr": "pendant",
+      "nl": "gedurende, tijdens"
+    },
+    {
+      "fr": "un père",
+      "nl": "een vader"
+    },
+    {
+      "fr": "petit(e)",
+      "nl": "klein"
+    },
+    {
+      "fr": "un peu",
+      "nl": "een beetje"
+    },
+    {
+      "fr": "une photo",
+      "nl": "een foto"
+    },
+    {
+      "fr": "une pièce",
+      "nl": "een kamer"
+    },
+    {
+      "fr": "un pied : à pied",
+      "nl": "een voet : te voet"
+    },
+    {
+      "fr": "une piscine",
+      "nl": "een zwembad"
+    },
+    {
+      "fr": "une pizza",
+      "nl": "een pizza"
+    },
+    {
+      "fr": "une plage",
+      "nl": "een strand"
+    },
+    {
+      "fr": "plait : s'il te ~",
+      "nl": "alsjeblieft"
+    },
+    {
+      "fr": "s'il vous ~",
+      "nl": "alstublieft"
+    },
+    {
+      "fr": "pleuvoir : il pleut",
+      "nl": "regenen: het regent"
+    },
+    {
+      "fr": "plus : ne … plus",
+      "nl": "niet meer"
+    },
+    {
+      "fr": "une poire",
+      "nl": "een peer"
+    },
+    {
+      "fr": "un poisson",
+      "nl": "een vis"
+    },
+    {
+      "fr": "une pomme",
+      "nl": "een appel"
+    },
+    {
+      "fr": "un portable",
+      "nl": "een gsm"
+    },
+    {
+      "fr": "une porte",
+      "nl": "een deur"
+    },
+    {
+      "fr": "porter",
+      "nl": "dragen"
+    },
+    {
+      "fr": "le Portugal",
+      "nl": "Portugal"
+    },
+    {
+      "fr": "une poste",
+      "nl": "een postkantoor"
+    },
+    {
+      "fr": "un poster",
+      "nl": "een poster"
+    },
+    {
+      "fr": "un pot-au-feu",
+      "nl": "een stoofschotel"
+    },
+    {
+      "fr": "pour",
+      "nl": "voor"
+    },
+    {
+      "fr": "pourquoi",
+      "nl": "waarom"
+    },
+    {
+      "fr": "pouvoir",
+      "nl": "mogen, kunnen"
+    },
+    {
+      "fr": "pratique",
+      "nl": "praktisch"
+    },
+    {
+      "fr": "préféré (e)",
+      "nl": "lievelings-"
+    },
+    {
+      "fr": "préférer",
+      "nl": "verkiezen"
+    },
+    {
+      "fr": "premier, premièr",
+      "nl": "re eerste"
+    },
+    {
+      "fr": "prendre",
+      "nl": "nemen"
+    },
+    {
+      "fr": "près (de)",
+      "nl": "dicht (bij)"
+    },
+    {
+      "fr": "presque",
+      "nl": "bijna"
+    },
+    {
+      "fr": "prêt(e)",
+      "nl": "klaar"
+    },
+    {
+      "fr": "un(e) professeur",
+      "nl": "r een leraar, lerares"
+    },
+    {
+      "fr": "une promenade",
+      "nl": "een wandeling"
+    },
+    {
+      "fr": "puis",
+      "nl": "daarna, nadien"
+    },
+    {
+      "fr": "quand",
+      "nl": "wanneer"
+    },
+    {
+      "fr": "quarante",
+      "nl": "veertig"
+    },
+    {
+      "fr": "quatorze",
+      "nl": "veertien"
+    },
+    {
+      "fr": "quatre",
+      "nl": "vier"
+    },
+    {
+      "fr": "quel(s), quelle(s)",
+      "nl": ") welke"
+    },
+    {
+      "fr": "quelque(s)",
+      "nl": "enkele, enige"
+    },
+    {
+      "fr": "qu'est-ce que",
+      "nl": "wat"
+    },
+    {
+      "fr": "Qu'est-ce que c'e",
+      "nl": "est ? Wat is het?"
+    },
+    {
+      "fr": "qui",
+      "nl": "wie"
+    },
+    {
+      "fr": "quinze",
+      "nl": "vijftien"
+    },
+    {
+      "fr": "quoi",
+      "nl": "wat"
+    },
+    {
+      "fr": "un rayon",
+      "nl": "een afdeling"
+    },
+    {
+      "fr": "regarder",
+      "nl": "kijken"
+    },
+    {
+      "fr": "un rendez-vous",
+      "nl": "een afspraak"
+    },
+    {
+      "fr": "rester",
+      "nl": "blijven"
+    },
+    {
+      "fr": "retard * : en retard",
+      "nl": "te laat"
+    },
+    {
+      "fr": "revoir : au revoir",
+      "nl": "tot ziens"
+    },
+    {
+      "fr": "revenir",
+      "nl": "terugkomen"
+    },
+    {
+      "fr": "rien",
+      "nl": "niets"
+    },
+    {
+      "fr": "-> de ~",
+      "nl": "graag gedaan"
+    },
+    {
+      "fr": "un rond-point",
+      "nl": "een rotonde"
+    },
+    {
+      "fr": "rouge",
+      "nl": "rood"
+    },
+    {
+      "fr": "une rue",
+      "nl": "een straat"
+    },
+    {
+      "fr": "sa",
+      "nl": "zijn, haar"
+    },
+    {
+      "fr": "un sac à dos",
+      "nl": "een rugzak"
+    },
+    {
+      "fr": "une salade",
+      "nl": "een krop sla, een slaatje"
+    },
+    {
+      "fr": "une salle de bains",
+      "nl": "een badkamer"
+    },
+    {
+      "fr": "salut",
+      "nl": "hallo, dag"
+    },
+    {
+      "fr": "samedi",
+      "nl": "zaterdag"
+    },
+    {
+      "fr": "la santé",
+      "nl": "de gezondheid"
+    },
+    {
+      "fr": "savoir : je sais",
+      "nl": "weten: ik weet"
+    },
+    {
+      "fr": "seize",
+      "nl": "zestien"
+    },
+    {
+      "fr": "un séjour",
+      "nl": "een woonkamer"
+    },
+    {
+      "fr": "une semaine",
+      "nl": "een week"
+    },
+    {
+      "fr": "sept",
+      "nl": "zeven"
+    },
+    {
+      "fr": "ses",
+      "nl": "zijn, haar"
+    },
+    {
+      "fr": "seul(e)s",
+      "nl": "alleen"
+    },
+    {
+      "fr": "six",
+      "nl": "zes"
+    },
+    {
+      "fr": "sixième",
+      "nl": "zesde"
+    },
+    {
+      "fr": "un smartphone",
+      "nl": "een smartphone"
+    },
+    {
+      "fr": "une sœur",
+      "nl": "een zus"
+    },
+    {
+      "fr": "un soir",
+      "nl": "een avond"
+    },
+    {
+      "fr": "le soleil",
+      "nl": "de zon"
+    },
+    {
+      "fr": "son",
+      "nl": "zijn, haar"
+    },
+    {
+      "fr": "une sortie",
+      "nl": "een uitgang"
+    },
+    {
+      "fr": "sortir",
+      "nl": "naar buiten gaan, uitgaan"
+    },
+    {
+      "fr": "sous",
+      "nl": "onder"
+    },
+    {
+      "fr": "un sport",
+      "nl": "een sport"
+    },
+    {
+      "fr": "super",
+      "nl": "super"
+    },
+    {
+      "fr": "un supermarché",
+      "nl": "een supermarkt"
+    },
+    {
+      "fr": "sur",
+      "nl": "op"
+    },
+    {
+      "fr": "sûr, sure",
+      "nl": "zeker"
+    },
+    {
+      "fr": "surfer",
+      "nl": "surfen"
+    },
+    {
+      "fr": "surtout",
+      "nl": "bovenal"
+    },
+    {
+      "fr": "sympa(thique)",
+      "nl": "sympathiek"
+    },
+    {
+      "fr": "ta",
+      "nl": "jouw, je"
+    },
+    {
+      "fr": "une table",
+      "nl": "een tafel"
+    },
+    {
+      "fr": "une tablette",
+      "nl": "een tablet"
+    },
+    {
+      "fr": "une tante",
+      "nl": "een tante"
+    },
+    {
+      "fr": "tard",
+      "nl": "laat"
+    },
+    {
+      "fr": "une tartine",
+      "nl": "een boterham"
+    },
+    {
+      "fr": "une télé",
+      "nl": "een televisie"
+    },
+    {
+      "fr": "un téléphone",
+      "nl": "een telefoon"
+    },
+    {
+      "fr": "le temps",
+      "nl": "het weer"
+    },
+    {
+      "fr": "-> temps : il est ~",
+      "nl": "de tijd"
+    },
+    {
+      "fr": "tes",
+      "nl": "het is tijd"
+    },
+    {
+      "fr": "une tête",
+      "nl": "jouw, je"
+    },
+    {
+      "fr": "un ticket de ciném",
+      "nl": "een hoofd"
+    },
+    {
+      "fr": "toi",
+      "nl": "ma * een cinematicket"
+    },
+    {
+      "fr": "les toilettes",
+      "nl": "jij, je, (met) jou"
+    },
+    {
+      "fr": "une tomate",
+      "nl": "het toilet"
+    },
+    {
+      "fr": "tomber",
+      "nl": "een tomaat"
+    },
+    {
+      "fr": "ton",
+      "nl": "vallen"
+    },
+    {
+      "fr": "tôt",
+      "nl": "jouw, je"
+    },
+    {
+      "fr": "tourner",
+      "nl": "vroeg"
+    },
+    {
+      "fr": "tout(e)",
+      "nl": "draaien"
+    },
+    {
+      "fr": "tout",
+      "nl": "heel, elk"
+    },
+    {
+      "fr": "tout à fait",
+      "nl": "alles"
+    },
+    {
+      "fr": "tout droit",
+      "nl": "absoluut, precies"
+    },
+    {
+      "fr": "tout le monde",
+      "nl": "rechtdoor"
+    },
+    {
+      "fr": "un train",
+      "nl": "iedereen"
+    },
+    {
+      "fr": "un travail",
+      "nl": "een trein"
+    },
+    {
+      "fr": "travailler",
+      "nl": "een werk"
+    },
+    {
+      "fr": "traverser",
+      "nl": "werken"
+    },
+    {
+      "fr": "treize",
+      "nl": "oversteken"
+    },
+    {
+      "fr": "trente",
+      "nl": "dertien"
+    },
+    {
+      "fr": "très",
+      "nl": "dertig"
+    },
+    {
+      "fr": "trois",
+      "nl": "heel, erg"
+    },
+    {
+      "fr": "troisième",
+      "nl": "drie"
+    },
+    {
+      "fr": "trop",
+      "nl": "derde"
+    },
+    {
+      "fr": "tu",
+      "nl": "jij, je"
+    },
+    {
+      "fr": "un, une",
+      "nl": "een"
+    },
+    {
+      "fr": "les vacances",
+      "nl": "de vakantie"
+    },
+    {
+      "fr": "un vélo",
+      "nl": "een fiets"
+    },
+    {
+      "fr": "un vendeur",
+      "nl": "een verkoper"
+    },
+    {
+      "fr": "une vendeuse",
+      "nl": "een verkoopster"
+    },
+    {
+      "fr": "vendre",
+      "nl": "verkopen"
+    },
+    {
+      "fr": "vendredi",
+      "nl": "vrijdag"
+    },
+    {
+      "fr": "venir",
+      "nl": "komen"
+    },
+    {
+      "fr": "le vent",
+      "nl": "de wind"
+    },
+    {
+      "fr": "un verre",
+      "nl": "een glas"
+    },
+    {
+      "fr": "vert(e)",
+      "nl": "groen"
+    },
+    {
+      "fr": "la viande",
+      "nl": "het vlees"
+    },
+    {
+      "fr": "la vie",
+      "nl": "het leven"
+    },
+    {
+      "fr": "une ville",
+      "nl": "een stad"
+    },
+    {
+      "fr": "vingt",
+      "nl": "twintig"
+    },
+    {
+      "fr": "visiter",
+      "nl": "bezoeken"
+    },
+    {
+      "fr": "vite",
+      "nl": "vlug"
+    },
+    {
+      "fr": "vivre",
+      "nl": "leven, wonen"
+    },
+    {
+      "fr": "voici ...",
+      "nl": "hier is … / hier zijn …"
+    },
+    {
+      "fr": "voilà ...",
+      "nl": "daar heb je … /"
+    },
+    {
+      "fr": "d",
+      "nl": "daar is … / daar zijn …"
+    },
+    {
+      "fr": "voir",
+      "nl": "zien, kijken"
+    },
+    {
+      "fr": "un voisin",
+      "nl": "een buurman"
+    },
+    {
+      "fr": "une voisine",
+      "nl": "een buurvrouw"
+    },
+    {
+      "fr": "une voiture",
+      "nl": "een wagen"
+    },
+    {
+      "fr": "vouloir : je veux",
+      "nl": "willen : ik wil"
+    },
+    {
+      "fr": "je voudrais",
+      "nl": "ik zou willen"
+    },
+    {
+      "fr": "vous",
+      "nl": "jullie, u"
+    },
+    {
+      "fr": "vrai",
+      "nl": "waar"
+    },
+    {
+      "fr": "-> C'est ~ ?",
+      "nl": "Is ‘t waar? / Echt?"
+    },
+    {
+      "fr": "vraiment",
+      "nl": "werkelijk, echt"
+    },
+    {
+      "fr": "la Wallonie",
+      "nl": "Wallonië"
+    },
+    {
+      "fr": "y",
+      "nl": "er"
+    },
+    {
+      "fr": "les yeux",
+      "nl": "de ogen"
+    },
+    {
+      "fr": "Zut !",
+      "nl": "Verdorie! Verrek!"
+    }
+  ]
+}

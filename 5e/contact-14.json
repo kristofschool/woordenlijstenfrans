@@ -1,0 +1,42 @@
+{
+  "id": "contact-14",
+  "name": "Contact 14",
+  "cards": [
+    {
+      "fr": "un ami",
+      "nl": "een vriend"
+    },
+    {
+      "fr": "une amie",
+      "nl": "een vriendin"
+    },
+    {
+      "fr": "un appareil",
+      "nl": "een (telefoon)toestel"
+    },
+    {
+      "fr": "une piscine",
+      "nl": "een zwembad"
+    },
+    {
+      "fr": "un rendez-vous",
+      "nl": "een afspraak"
+    },
+    {
+      "fr": "un téléphone",
+      "nl": "een telefoon"
+    },
+    {
+      "fr": "libre",
+      "nl": "vrij"
+    },
+    {
+      "fr": "quand",
+      "nl": "wanneer"
+    },
+    {
+      "fr": "tard",
+      "nl": "laat"
+    }
+  ]
+}

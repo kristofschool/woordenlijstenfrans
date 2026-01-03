@@ -1,0 +1,904 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Frans woordjes – Flipcards</title>
+  <style>
+    :root{
+      --bg:#0b1020;
+      --panel:#111a33;
+      --text:#e8ecff;
+      --muted:#a9b3d6;
+      --line:rgba(255,255,255,.12);
+      --good:#35d07f;
+      --bad:#ff5d6c;
+      --accent:#7aa2ff;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --radius:18px;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    body{
+      margin:0;
+      background: radial-gradient(1200px 700px at 20% 10%, rgba(122,162,255,.22), transparent 55%),
+                  radial-gradient(900px 600px at 85% 35%, rgba(53,208,127,.16), transparent 55%),
+                  radial-gradient(900px 600px at 70% 90%, rgba(255,93,108,.12), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      min-height:100vh;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:24px;
+    }
+    .wrap{ width:min(980px, 100%); display:grid; gap:16px; }
+    header{ display:flex; align-items:flex-end; justify-content:space-between; gap:12px; }
+    h1{ margin:0; font-size:22px; letter-spacing:.2px; }
+    .sub{ color:var(--muted); font-size:13px; margin-top:6px; line-height:1.35; max-width: 80ch; }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .panel{ padding:16px; background: rgba(17,26,51,.55); backdrop-filter: blur(8px); }
+    .sectionTitle{
+      font-size:13px; color:var(--muted); text-transform: uppercase;
+      letter-spacing: .12em; margin:0 0 10px 0;
+    }
+    .hint{ font-size:13px; color:var(--muted); line-height:1.4; }
+    .row{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    label{ font-size:14px; color:var(--text); display:flex; gap:8px; align-items:center; }
+    input[type="number"], select, input[type="text"]{
+      background: rgba(255,255,255,.06);
+      border:1px solid var(--line);
+      color:var(--text);
+      padding:10px 12px;
+      border-radius:12px;
+      outline:none;
+      min-width: 160px;
+    }
+    input[type="checkbox"]{ transform: scale(1.1); }
+    .btn{
+      background: rgba(122,162,255,.22);
+      border:1px solid rgba(122,162,255,.35);
+      color:var(--text);
+      padding:10px 14px;
+      border-radius:12px;
+      cursor:pointer;
+      font-weight:700;
+    }
+    .btn:hover{ filter: brightness(1.08); }
+    .btn.secondary{ background: rgba(255,255,255,.06); border:1px solid var(--line); font-weight:700; }
+    .btn.good{ background: rgba(53,208,127,.18); border:1px solid rgba(53,208,127,.35); }
+    .btn.bad{ background: rgba(255,93,108,.16); border:1px solid rgba(255,93,108,.35); }
+    .btn:disabled{ opacity:.5; cursor:not-allowed; }
+
+    /* Wizard */
+    .steps{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .stepPill{
+      display:inline-flex; gap:8px; align-items:center;
+      border:1px solid var(--line); padding:8px 10px; border-radius:999px;
+      background: rgba(255,255,255,.05); color:var(--muted); font-size:13px;
+    }
+    .stepPill.active{ color:var(--text); border-color: rgba(122,162,255,.45); background: rgba(122,162,255,.12); }
+    .wizard{ display:grid; gap:12px; }
+    .screen{ display:none; }
+    .screen.active{ display:block; }
+
+    /* Lists UI */
+    .listsTop{ display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; align-items:center; }
+    .lists{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap:8px 12px;
+      margin-top:10px;
+    }
+    @media (max-width: 520px){ .lists{ grid-template-columns: 1fr; } }
+    .listItem{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      border-radius: 14px;
+      padding:10px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+    }
+    .listMeta{ display:flex; flex-direction:column; gap:2px; }
+    .listName{ font-weight:900; font-size:14px; }
+    .listCount{ color:var(--muted); font-size:12px; }
+
+    /* Player */
+    .playWrap{ display:grid; gap:12px; }
+    .progress{
+      display:flex; justify-content:space-between; align-items:center; gap:10px;
+      flex-wrap:wrap; font-size:13px; color:var(--muted);
+    }
+    .bar{
+      width:100%; height:10px; border-radius:999px;
+      border:1px solid var(--line); background: rgba(255,255,255,.05); overflow:hidden;
+    }
+    .bar > div{ height:100%; width:0%; background: linear-gradient(90deg, rgba(122,162,255,.95), rgba(53,208,127,.9)); }
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      border:1px solid var(--line); padding:8px 10px; border-radius:999px;
+      background: rgba(255,255,255,.05);
+    }
+    .pill strong{ color:var(--text); font-weight:900; }
+
+    .flipWrap{ perspective: 1200px; width:100%; min-height: 320px; }
+    .flip{
+      position:relative; width:100%; min-height: 320px;
+      transform-style: preserve-3d;
+      transition: transform .55s cubic-bezier(.2,.8,.2,1);
+    }
+    .flip.isFlipped{ transform: rotateY(180deg); }
+    .face{
+      position:absolute; inset:0; backface-visibility: hidden;
+      border-radius: 18px; border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      display:flex; flex-direction:column; justify-content:center; align-items:center;
+      padding:18px; text-align:center;
+      box-shadow: 0 10px 40px rgba(0,0,0,.25);
+    }
+    .back{ transform: rotateY(180deg); background: rgba(255,255,255,.08); }
+    .lang{ font-size:12px; color:var(--muted); letter-spacing:.12em; text-transform:uppercase; margin-bottom:10px; }
+    .word{ font-size:32px; line-height:1.15; font-weight:950; letter-spacing:.2px; }
+    .meta{ margin-top:10px; font-size:14px; color:var(--muted); max-width: 46ch; }
+    .tap{ margin-top:18px; font-size:13px; color:var(--accent); opacity:.95; }
+    .actions{ display:flex; gap:10px; flex-wrap:wrap; }
+
+    /* Fullscreen-ish inside embed */
+    .playerFullscreen{
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display:none;
+      background: radial-gradient(1200px 700px at 20% 10%, rgba(122,162,255,.22), transparent 55%),
+                  radial-gradient(900px 600px at 85% 35%, rgba(53,208,127,.16), transparent 55%),
+                  radial-gradient(900px 600px at 70% 90%, rgba(255,93,108,.12), transparent 55%),
+                  var(--bg);
+      padding:24px;
+      overflow:auto;
+    }
+    .playerFullscreen.active{ display:block; }
+    .playerBox{ width:min(980px, 100%); margin:0 auto; display:grid; gap:14px; }
+    .topBar{ display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; }
+
+    /* Modal */
+    .modal{
+      position:fixed; inset:0; z-index: 80;
+      background: rgba(0,0,0,.6);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+    }
+    .modalCard{
+      width:min(900px, 100%);
+      background: rgba(17,26,51,.96);
+      border:1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      max-height: calc(100vh - 48px);
+      display:flex;
+      flex-direction:column;
+    }
+    .modalHead{
+      padding:14px 16px;
+      border-bottom:1px solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .modalTitle{ font-weight:950; }
+    .modalBody{
+      padding:14px 16px;
+      display:block;
+      overflow:auto;
+    }
+    table{ width:100%; border-collapse: collapse; }
+    th, td{ text-align:left; padding:8px; border-bottom:1px solid var(--line); }
+    th{ color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.12em; position: sticky; top: 0; background: rgba(17,26,51,.96); }
+    .toast{ font-size:13px; color:var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Frans woordjes – flipcards</h1>
+        <div class="sub">
+          Repo-structuur: <code>/5e/index.json</code> en <code>/6e/index.json</code> + bijhorende JSON-lijsten.
+          Je kiest eerst het jaar, daarna de lijsten.
+        </div>
+      </div>
+      <div class="steps" aria-label="Stappen">
+        <span class="stepPill active" id="pill1">1 · Lijsten</span>
+        <span class="stepPill" id="pill2">2 · Instellingen</span>
+        <span class="stepPill" id="pill3">3 · Oefenen</span>
+      </div>
+    </header>
+
+    <div class="card">
+      <div class="panel wizard">
+
+        <!-- Screen 1 -->
+        <section class="screen active" id="screen1">
+          <div class="sectionTitle">Stap 1 — Kies jaar en woordenlijsten</div>
+
+          <div class="listsTop">
+            <div class="row">
+              <label>
+                Jaar
+                <select id="yearSelect">
+                  <option value="6e">6e jaar</option>
+                  <option value="5e">5e jaar</option>
+                </select>
+              </label>
+
+              <label>
+                Zoek lijst
+                <input type="text" id="listSearch" placeholder="bv. contact, revision…" />
+              </label>
+            </div>
+
+            <div class="row">
+              <button class="btn secondary" id="reloadBtn">Opnieuw laden</button>
+              <button class="btn" id="toStep2" disabled>Volgende</button>
+            </div>
+          </div>
+
+          <div class="hint" id="sourceHint"></div>
+          <div class="lists" id="lists"></div>
+          <div class="toast" id="toast1"></div>
+        </section>
+
+        <!-- Screen 2 -->
+        <section class="screen" id="screen2">
+          <div class="sectionTitle">Stap 2 — Instellingen</div>
+
+          <div class="row">
+            <label>Aantal kaartjes
+              <input type="number" id="count" min="1" step="1" value="20" />
+            </label>
+
+            <label>Richting
+              <select id="direction">
+                <option value="fr-nl">Frans → Nederlands</option>
+                <option value="nl-fr">Nederlands → Frans</option>
+                <option value="mix">Gemengd</option>
+              </select>
+            </label>
+
+            <label title="Schudt de startvolgorde">
+              <input type="checkbox" id="shuffle" checked />
+              Shuffle
+            </label>
+
+            <label title="Foute kaart terug na X andere kaarten">
+              Herhaal na
+              <input type="number" id="reinsert" min="1" step="1" value="6" />
+            </label>
+          </div>
+
+          <div class="row">
+            <button class="btn secondary" id="backTo1">Terug</button>
+            <button class="btn" id="startBtn">Start oefenen</button>
+          </div>
+          <div class="toast" id="toast2"></div>
+        </section>
+
+        <!-- Screen 3 -->
+        <section class="screen" id="screen3">
+          <div class="sectionTitle">Stap 3 — Oefenen</div>
+          <div class="hint">De oefenmodus opent in een focus-scherm (binnen deze pagina). Escape sluit.</div>
+          <div class="row">
+            <button class="btn secondary" id="backTo2">Terug naar instellingen</button>
+            <button class="btn" id="openPlayerBtn">Open oefenen</button>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Fullscreen Player -->
+  <div class="playerFullscreen" id="playerFS" role="dialog" aria-modal="true">
+    <div class="playerBox">
+      <div class="topBar">
+        <div class="pill"><span>💾</span><strong>Lokale voortgang: aan</strong></div>
+        <div class="row">
+          <button class="btn secondary" id="exitPlayer">Sluiten</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="panel playWrap">
+          <div class="progress">
+            <div id="pText">—</div>
+            <div class="row">
+              <span class="pill"><span>✅</span><strong id="known">0</strong>&nbsp;gekend</span>
+              <span class="pill"><span>🧠</span><strong id="left">0</strong>&nbsp;te gaan</span>
+            </div>
+          </div>
+          <div class="bar"><div id="barFill"></div></div>
+
+          <div class="flipWrap">
+            <div class="flip" id="flip">
+              <div class="face front">
+                <div class="lang" id="frontLang">—</div>
+                <div class="word" id="frontWord">—</div>
+                <div class="meta" id="frontMeta"></div>
+                <div class="tap">Klik om om te draaien (spatie)</div>
+              </div>
+              <div class="face back">
+                <div class="lang" id="backLang">—</div>
+                <div class="word" id="backWord">—</div>
+                <div class="meta" id="backMeta"></div>
+                <div class="tap">Klik opnieuw om terug te draaien</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="btn good" id="btnKnow">Ken ik (K)</button>
+            <button class="btn bad" id="btnDont">Ken ik niet (N)</button>
+            <button class="btn secondary" id="btnSkip">Skip (S)</button>
+          </div>
+
+          <div class="toast" id="toast3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: list preview -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true">
+    <div class="modalCard">
+      <div class="modalHead">
+        <div class="modalTitle" id="modalTitle">—</div>
+        <div class="row">
+          <input type="text" id="modalSearch" placeholder="Zoek in lijst…" />
+          <button class="btn secondary" id="modalClose">Sluiten</button>
+        </div>
+      </div>
+      <div class="modalBody">
+        <table>
+          <thead><tr><th>Frans</th><th>Nederlands</th></tr></thead>
+          <tbody id="modalTbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+<script>
+/* =======================
+   CONFIG
+   =======================
+   Zet SITE_BASE op je GitHub Pages root (aanrader):
+     https://kristofschool.github.io/woordenlijstenfrans
+
+   Als je (tijdelijk) raw wil gebruiken:
+     https://raw.githubusercontent.com/kristofschool/woordenlijstenfrans/main
+
+   Repo structuur verwacht:
+     /5e/index.json
+     /6e/index.json
+     ... en bijhorende json files in dezelfde map.
+*/
+const SITE_BASE = "https://kristofschool.github.io/woordenlijstenfrans";
+const INDEX_FILE = "index.json";
+const YEARS = ["6e","5e"]; // whitelist
+
+const LS_KEY = "fr_flipcards_by_year_v1";
+
+const $ = (sel) => document.querySelector(sel);
+
+function normalizeBaseUrl(u){ return String(u || "").replace(/\/+$/,""); }
+function urlJoin(base, file){
+  return normalizeBaseUrl(base) + "/" + String(file || "").replace(/^\/+/,"");
+}
+function cacheBust(url){
+  const sep = url.includes("?") ? "&" : "?";
+  return url + sep + "v=" + Date.now();
+}
+async function fetchJson(url){
+  const res = await fetch(cacheBust(url), { cache: "no-store" });
+  if (!res.ok) throw new Error(`Fetch failed (${res.status}) voor ${url}`);
+  return await res.json();
+}
+
+function getYearFromUrl(){
+  const p = new URLSearchParams(location.search);
+  const y = (p.get("jaar") || "").trim().toLowerCase();
+  return YEARS.includes(y) ? y : "6e";
+}
+function setYearInUrl(year){
+  const u = new URL(location.href);
+  u.searchParams.set("jaar", year);
+  history.replaceState({}, "", u.toString());
+}
+let DATA_BASE = null;
+function getDataBaseUrl(year){
+  return normalizeBaseUrl(SITE_BASE) + "/" + year;
+}
+
+/* =======================
+   Wizard
+   ======================= */
+function setStep(n){
+  $("#screen1").classList.toggle("active", n===1);
+  $("#screen2").classList.toggle("active", n===2);
+  $("#screen3").classList.toggle("active", n===3);
+
+  $("#pill1").classList.toggle("active", n===1);
+  $("#pill2").classList.toggle("active", n===2);
+  $("#pill3").classList.toggle("active", n===3);
+}
+function toast(id, msg){ $(id).textContent = msg || ""; }
+
+/* =======================
+   Data state
+   ======================= */
+let indexData = null;          // {lists:[{id,name,file}]}
+let loadedLists = new Map();   // id -> {id,name,cards:[]}
+let selectedIds = new Set();
+
+/* =======================
+   List screen
+   ======================= */
+function updateNextButton(){
+  $("#toStep2").disabled = selectedIds.size === 0;
+}
+function renderLists(){
+  const q = ($("#listSearch").value || "").trim().toLowerCase();
+  const box = $("#lists");
+  box.innerHTML = "";
+
+  const lists = (indexData?.lists || []).filter(l => {
+    if (!q) return true;
+    return (l.name || "").toLowerCase().includes(q) || (l.id || "").toLowerCase().includes(q);
+  });
+
+  for (const item of lists){
+    const isChecked = selectedIds.has(item.id);
+    const count = loadedLists.get(item.id)?.cards?.length;
+
+    const row = document.createElement("div");
+    row.className = "listItem";
+
+    const left = document.createElement("div");
+    left.className = "listMeta";
+    const name = document.createElement("div");
+    name.className = "listName";
+    name.textContent = item.name || item.id;
+
+    const meta = document.createElement("div");
+    meta.className = "listCount";
+    meta.textContent = (typeof count === "number") ? `${count} kaartjes` : "—";
+
+    left.appendChild(name);
+    left.appendChild(meta);
+
+    const right = document.createElement("div");
+    right.className = "row";
+
+    const cb = document.createElement("input");
+    cb.type = "checkbox";
+    cb.checked = isChecked;
+    cb.addEventListener("change", () => {
+      if (cb.checked) selectedIds.add(item.id);
+      else selectedIds.delete(item.id);
+      updateNextButton();
+      persistConfigOnly();
+    });
+
+    const viewBtn = document.createElement("button");
+    viewBtn.className = "btn secondary";
+    viewBtn.textContent = "Bekijk";
+    viewBtn.addEventListener("click", async () => {
+      try{
+        await ensureListLoaded(item.id);
+        openModal(item.id);
+      }catch(e){
+        toast("#toast1", `Kon lijst niet openen: ${e.message}`);
+      }
+    });
+
+    right.appendChild(cb);
+    right.appendChild(viewBtn);
+
+    row.appendChild(left);
+    row.appendChild(right);
+    box.appendChild(row);
+  }
+
+  updateNextButton();
+}
+
+async function ensureListLoaded(listId){
+  if (loadedLists.has(listId)) return;
+  const item = (indexData?.lists || []).find(x => x.id === listId);
+  if (!item) throw new Error("Onbekende lijst: " + listId);
+  const data = await fetchJson(urlJoin(DATA_BASE, item.file));
+  loadedLists.set(listId, {
+    id: data.id || item.id,
+    name: data.name || item.name || item.id,
+    cards: Array.isArray(data.cards) ? data.cards : []
+  });
+}
+
+async function loadIndexForYear(year){
+  toast("#toast1","");
+  $("#lists").innerHTML = "";
+  $("#toStep2").disabled = true;
+
+  DATA_BASE = getDataBaseUrl(year);
+  $("#sourceHint").textContent = `Jaar: ${year} — bron: ${urlJoin(DATA_BASE, INDEX_FILE)}`;
+
+  indexData = await fetchJson(urlJoin(DATA_BASE, INDEX_FILE));
+  if (!indexData || !Array.isArray(indexData.lists)) {
+    throw new Error("index.json heeft geen 'lists' array.");
+  }
+
+  renderLists();
+  // Light preload counts for first ~14 lists (nice-to-have)
+  const first = indexData.lists.slice(0,14).map(x => x.id);
+  for (const id of first){
+    try{ await ensureListLoaded(id); }catch(e){}
+  }
+  renderLists();
+}
+
+/* =======================
+   Modal preview
+   ======================= */
+function getListById(id){ return loadedLists.get(id) || null; }
+let modalState = { listId: null, rows: [] };
+
+function openModal(listId){
+  const list = getListById(listId);
+  if (!list) return;
+  modalState.listId = listId;
+  modalState.rows = (list.cards || []).map(c => ({ fr: c.fr || "", nl: c.nl || "" }));
+  $("#modalTitle").textContent = `${list.name} (${modalState.rows.length})`;
+  $("#modalSearch").value = "";
+  renderModalTable();
+  $("#modal").style.display = "flex";
+  $("#modalSearch").focus();
+}
+function closeModal(){ $("#modal").style.display = "none"; }
+function renderModalTable(){
+  const q = ($("#modalSearch").value || "").trim().toLowerCase();
+  const tbody = $("#modalTbody");
+  tbody.innerHTML = "";
+  const rows = modalState.rows.filter(r => {
+    if (!q) return true;
+    return r.fr.toLowerCase().includes(q) || r.nl.toLowerCase().includes(q);
+  });
+  const frag = document.createDocumentFragment();
+  for (const r of rows){
+    const tr = document.createElement("tr");
+    const td1 = document.createElement("td");
+    const td2 = document.createElement("td");
+    td1.textContent = r.fr;
+    td2.textContent = r.nl;
+    tr.appendChild(td1); tr.appendChild(td2);
+    frag.appendChild(tr);
+  }
+  tbody.appendChild(frag);
+}
+
+/* =======================
+   Session logic
+   ======================= */
+let queue = [];
+let current = null;
+let knownSet = new Set();
+let total = 0;
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i=a.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+  return a;
+}
+function directionForCard(baseDir){
+  if (baseDir === "mix") return Math.random() < 0.5 ? "fr-nl" : "nl-fr";
+  return baseDir;
+}
+function renderCard(cardObj, dir){
+  $("#flip").classList.remove("isFlipped");
+
+  const frontLang = (dir === "fr-nl") ? "FRANS" : "NEDERLANDS";
+  const backLang  = (dir === "fr-nl") ? "NEDERLANDS" : "FRANS";
+  const frontWord = (dir === "fr-nl") ? cardObj.fr : cardObj.nl;
+  const backWord  = (dir === "fr-nl") ? cardObj.nl : cardObj.fr;
+
+  $("#frontLang").textContent = frontLang;
+  $("#backLang").textContent  = backLang;
+  $("#frontWord").textContent = frontWord || "—";
+  $("#backWord").textContent  = backWord || "—";
+
+  const listName = cardObj.listName ? `Lijst: ${cardObj.listName}` : "";
+  $("#frontMeta").textContent = listName;
+  $("#backMeta").textContent  = listName;
+}
+function updateProgress(){
+  const left = queue.length + (current ? 1 : 0);
+  $("#known").textContent = knownSet.size;
+  $("#left").textContent = left;
+  const done = total ? (knownSet.size / total) : 0;
+  $("#barFill").style.width = Math.round(done*100) + "%";
+  $("#pText").textContent = total ? `${knownSet.size}/${total} gekend (${Math.round(done*100)}%)` : "—";
+}
+
+/* Local progress: always on */
+function persistAll(){
+  const payload = {
+    v: 1,
+    site: SITE_BASE,
+    year: $("#yearSelect").value,
+    selected: Array.from(selectedIds),
+    settings: {
+      count: $("#count").value,
+      direction: $("#direction").value,
+      shuffle: $("#shuffle").checked,
+      reinsert: $("#reinsert").value
+    },
+    state: { queue, current, known: Array.from(knownSet), total }
+  };
+  try{ localStorage.setItem(LS_KEY, JSON.stringify(payload)); }catch(e){}
+}
+function persistConfigOnly(){
+  const payload = {
+    v: 1,
+    site: SITE_BASE,
+    year: $("#yearSelect").value,
+    selected: Array.from(selectedIds),
+    settings: {
+      count: $("#count").value,
+      direction: $("#direction").value,
+      shuffle: $("#shuffle").checked,
+      reinsert: $("#reinsert").value
+    }
+  };
+  try{ localStorage.setItem(LS_KEY, JSON.stringify(payload)); }catch(e){}
+}
+function loadSaved(){
+  try{
+    const raw = localStorage.getItem(LS_KEY);
+    if (!raw) return null;
+    return JSON.parse(raw);
+  }catch(e){ return null; }
+}
+function applySaved(obj){
+  if (!obj) return;
+  // restore year if valid
+  if (obj.year && YEARS.includes(obj.year)) {
+    $("#yearSelect").value = obj.year;
+    setYearInUrl(obj.year);
+  }
+  if (Array.isArray(obj.selected)) selectedIds = new Set(obj.selected);
+  if (obj.settings){
+    if (obj.settings.count) $("#count").value = obj.settings.count;
+    if (obj.settings.direction) $("#direction").value = obj.settings.direction;
+    if (typeof obj.settings.shuffle === "boolean") $("#shuffle").checked = obj.settings.shuffle;
+    if (obj.settings.reinsert) $("#reinsert").value = obj.settings.reinsert;
+  }
+  if (obj.state && obj.state.total){
+    queue = obj.state.queue || [];
+    current = obj.state.current || null;
+    knownSet = new Set(obj.state.known || []);
+    total = obj.state.total || 0;
+  }
+}
+
+async function startSession(){
+  toast("#toast2","");
+  if (selectedIds.size === 0){
+    toast("#toast2","Kies minstens één lijst.");
+    return;
+  }
+
+  // Ensure lists loaded
+  const ids = Array.from(selectedIds);
+  for (const id of ids) await ensureListLoaded(id);
+
+  // Flatten cards
+  let cards = [];
+  for (const id of ids){
+    const list = loadedLists.get(id);
+    for (const c of (list.cards || [])){
+      const card = {
+        fr: c.fr || "",
+        nl: c.nl || "",
+        listId: id,
+        listName: list.name || id
+      };
+      card.key = `${id}||${card.fr}||${card.nl}`;
+      card.dir = directionForCard($("#direction").value);
+      cards.push(card);
+    }
+  }
+  if (cards.length === 0){
+    toast("#toast2","Geen kaartjes gevonden in je selectie.");
+    return;
+  }
+
+  let wanted = parseInt($("#count").value || "0", 10);
+  if (!Number.isFinite(wanted) || wanted <= 0) wanted = cards.length;
+  wanted = Math.min(wanted, cards.length);
+
+  if ($("#shuffle").checked) cards = shuffle(cards);
+  cards = cards.slice(0, wanted);
+
+  knownSet = new Set();
+  current = null;
+  queue = cards;
+  total = cards.length;
+
+  persistAll();
+  openPlayer();
+  nextCard();
+}
+
+function nextCard(){
+  if (!current && queue.length === 0){
+    $("#toast3").textContent = "Klaar 🎉 Alles staat op “ken ik”.";
+    $("#btnKnow").disabled = true;
+    $("#btnDont").disabled = true;
+    $("#btnSkip").disabled = true;
+    updateProgress();
+    persistAll();
+    return;
+  }
+  if (!current) current = queue.shift();
+
+  renderCard(current, current.dir);
+  $("#btnKnow").disabled = false;
+  $("#btnDont").disabled = false;
+  $("#btnSkip").disabled = false;
+  $("#toast3").textContent = "";
+  updateProgress();
+  persistAll();
+}
+function markKnown(){
+  if (!current) return;
+  knownSet.add(current.key);
+  current = null;
+  persistAll();
+  nextCard();
+}
+function markDontKnow(){
+  if (!current) return;
+  const n = Math.max(1, parseInt($("#reinsert").value || "6", 10));
+  const insertAt = Math.min(queue.length, n);
+  queue.splice(insertAt, 0, current);
+  current = null;
+  persistAll();
+  nextCard();
+}
+function skip(){
+  if (!current) return;
+  queue.push(current);
+  current = null;
+  persistAll();
+  nextCard();
+}
+
+/* Player overlay */
+function openPlayer(){ $("#playerFS").classList.add("active"); setStep(3); }
+function closePlayer(){ $("#playerFS").classList.remove("active"); }
+
+/* =======================
+   Bind + boot
+   ======================= */
+function clearYearCaches(){
+  indexData = null;
+  loadedLists = new Map();
+  selectedIds = new Set();
+  queue = []; current = null; knownSet = new Set(); total = 0;
+}
+
+function bind(){
+  $("#listSearch").addEventListener("input", renderLists);
+
+  $("#yearSelect").addEventListener("change", async () => {
+    const y = $("#yearSelect").value;
+    setYearInUrl(y);
+
+    clearYearCaches();
+
+    try{
+      await loadIndexForYear(y);
+      toast("#toast1", `Geladen: ${y}`);
+      persistConfigOnly();
+    }catch(e){
+      toast("#toast1", e.message);
+    }
+  });
+
+  $("#reloadBtn").addEventListener("click", async () => {
+    try{
+      clearYearCaches();
+      await loadIndexForYear($("#yearSelect").value);
+      toast("#toast1","Opnieuw geladen.");
+      persistConfigOnly();
+    }catch(e){
+      toast("#toast1", e.message);
+    }
+  });
+
+  $("#toStep2").addEventListener("click", () => { setStep(2); persistConfigOnly(); });
+  $("#backTo1").addEventListener("click", () => setStep(1));
+  $("#backTo2").addEventListener("click", () => setStep(2));
+  $("#openPlayerBtn").addEventListener("click", () => openPlayer());
+
+  $("#startBtn").addEventListener("click", async () => {
+    try{ await startSession(); }catch(e){ toast("#toast2", e.message); }
+  });
+
+  $("#exitPlayer").addEventListener("click", () => closePlayer());
+  $("#flip").addEventListener("click", () => $("#flip").classList.toggle("isFlipped"));
+
+  $("#btnKnow").addEventListener("click", markKnown);
+  $("#btnDont").addEventListener("click", markDontKnow);
+  $("#btnSkip").addEventListener("click", skip);
+
+  $("#modalClose").addEventListener("click", closeModal);
+  $("#modal").addEventListener("click", (e) => { if (e.target === $("#modal")) closeModal(); });
+  $("#modalSearch").addEventListener("input", renderModalTable);
+
+  window.addEventListener("keydown", (e) => {
+    const playerOpen = $("#playerFS").classList.contains("active");
+    if (!playerOpen) return;
+
+    if (e.key === "Escape"){ closePlayer(); return; }
+    if (e.key === " "){ e.preventDefault(); $("#flip").classList.toggle("isFlipped"); }
+    if (e.key.toLowerCase() === "k") markKnown();
+    if (e.key.toLowerCase() === "n") markDontKnow();
+    if (e.key.toLowerCase() === "s") skip();
+  });
+}
+
+(async function boot(){
+  bind();
+
+  // init year from URL (or default)
+  const y = getYearFromUrl();
+  $("#yearSelect").value = y;
+  setYearInUrl(y);
+
+  // restore saved config (may override year)
+  const saved = loadSaved();
+  applySaved(saved);
+
+  // load index for selected year
+  const year = $("#yearSelect").value;
+  DATA_BASE = getDataBaseUrl(year);
+  $("#sourceHint").textContent = `Jaar: ${year} — bron: ${urlJoin(DATA_BASE, INDEX_FILE)}`;
+
+  try{
+    await loadIndexForYear(year);
+    renderLists();
+    if (total > 0){
+      toast("#toast2","Er staat nog een vorige sessie klaar (lokaal). Klik “Start oefenen” om opnieuw te starten of pas instellingen aan.");
+    }
+  }catch(e){
+    toast("#toast1",
+      "Kon index.json niet laden. Check of je bestanden effectief onder /" + year + "/ staan en of GitHub Pages actief is. Fout: " + e.message
+    );
+  }
+})();
+</script>
+</body>
+</html>

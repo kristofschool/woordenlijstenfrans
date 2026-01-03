@@ -1,0 +1,134 @@
+{
+  "id": "contact-07",
+  "name": "Contact 7",
+  "cards": [
+    {
+      "fr": "un cahier",
+      "nl": "een schrift"
+    },
+    {
+      "fr": "une chaise",
+      "nl": "een stoel"
+    },
+    {
+      "fr": "un copain",
+      "nl": "een vriend"
+    },
+    {
+      "fr": "une copine",
+      "nl": "een vriendin"
+    },
+    {
+      "fr": "le français",
+      "nl": "(het) Frans"
+    },
+    {
+      "fr": "un livre",
+      "nl": "een boek"
+    },
+    {
+      "fr": "un mur",
+      "nl": "een muur"
+    },
+    {
+      "fr": "un ordinateur",
+      "nl": "een computer"
+    },
+    {
+      "fr": "un ordinateur portable",
+      "nl": "een laptop"
+    },
+    {
+      "fr": "un paquet",
+      "nl": "een pakket"
+    },
+    {
+      "fr": "un portable / un GSM",
+      "nl": "een gsm"
+    },
+    {
+      "fr": "un poster",
+      "nl": "een poster"
+    },
+    {
+      "fr": "un prof(esseur)",
+      "nl": "een leraar"
+    },
+    {
+      "fr": "une prof(esseur)",
+      "nl": "een lerares"
+    },
+    {
+      "fr": "un smartphone",
+      "nl": "een smartphone"
+    },
+    {
+      "fr": "comprendre",
+      "nl": "begrijpen"
+    },
+    {
+      "fr": "à côté de",
+      "nl": "naast"
+    },
+    {
+      "fr": "à droite",
+      "nl": "rechts"
+    },
+    {
+      "fr": "à gauche",
+      "nl": "links"
+    },
+    {
+      "fr": "contre",
+      "nl": "tegen"
+    },
+    {
+      "fr": "depuis",
+      "nl": "sinds"
+    },
+    {
+      "fr": "devant",
+      "nl": "voor"
+    },
+    {
+      "fr": "derrière",
+      "nl": "achter"
+    },
+    {
+      "fr": "gentil, gentille",
+      "nl": "vriendelijk"
+    },
+    {
+      "fr": "heureux, heureuse",
+      "nl": "gelukkig"
+    },
+    {
+      "fr": "hier",
+      "nl": "gisteren"
+    },
+    {
+      "fr": "joli(e)",
+      "nl": "mooi"
+    },
+    {
+      "fr": "mon, ma",
+      "nl": "mijn"
+    },
+    {
+      "fr": "nouveau, nouvelle",
+      "nl": "nieuw"
+    },
+    {
+      "fr": "petit(e)",
+      "nl": "klein"
+    },
+    {
+      "fr": "sous",
+      "nl": "onder"
+    },
+    {
+      "fr": "surtout",
+      "nl": "vooral"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "contact-03",
+  "name": "Contact 3",
+  "cards": [
+    {
+      "fr": "un bureau",
+      "nl": "een werkkamer, bureau"
+    },
+    {
+      "fr": "un diner",
+      "nl": "een avondmaal"
+    },
+    {
+      "fr": "un garage",
+      "nl": "een garage"
+    },
+    {
+      "fr": "un instant",
+      "nl": "een ogenblik"
+    },
+    {
+      "fr": "une maman",
+      "nl": "een mama"
+    },
+    {
+      "fr": "un papa",
+      "nl": "een papa"
+    },
+    {
+      "fr": "un séjour",
+      "nl": "een woonkamer"
+    },
+    {
+      "fr": "être",
+      "nl": "zijn"
+    },
+    {
+      "fr": "dans",
+      "nl": "in"
+    },
+    {
+      "fr": "ici",
+      "nl": "hier"
+    },
+    {
+      "fr": "pourquoi",
+      "nl": "waarom"
+    },
+    {
+      "fr": "prêt(e)",
+      "nl": "klaar"
+    },
+    {
+      "fr": "sûr, sure",
+      "nl": "zeker"
+    },
+    {
+      "fr": "un(e)",
+      "nl": "een"
+    }
+  ]
+}

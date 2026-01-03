@@ -1,0 +1,102 @@
+{
+  "id": "contact-09",
+  "name": "Contact 9",
+  "cards": [
+    {
+      "fr": "une baguette",
+      "nl": "een stokbrood"
+    },
+    {
+      "fr": "une bouteille",
+      "nl": "een fles"
+    },
+    {
+      "fr": "le café",
+      "nl": "de koffie"
+    },
+    {
+      "fr": "le coca",
+      "nl": "de cola"
+    },
+    {
+      "fr": "une course",
+      "nl": "een boodschap"
+    },
+    {
+      "fr": "un fruit, les fruits",
+      "nl": "een vrucht, fruit"
+    },
+    {
+      "fr": "un légume",
+      "nl": "een groente"
+    },
+    {
+      "fr": "une limonade",
+      "nl": "een limonade"
+    },
+    {
+      "fr": "une liste",
+      "nl": "een lijst"
+    },
+    {
+      "fr": "une liste des courses",
+      "nl": "een boodschappenlijst"
+    },
+    {
+      "fr": "un pain",
+      "nl": "een brood"
+    },
+    {
+      "fr": "une poire",
+      "nl": "een peer"
+    },
+    {
+      "fr": "une pomme",
+      "nl": "een appel"
+    },
+    {
+      "fr": "un supermarché",
+      "nl": "een supermarkt"
+    },
+    {
+      "fr": "aider",
+      "nl": "helpen"
+    },
+    {
+      "fr": "faire",
+      "nl": "doen, maken"
+    },
+    {
+      "fr": "savoir : je sais",
+      "nl": "weten: ik weet"
+    },
+    {
+      "fr": "venir : tu viens",
+      "nl": "komen: je komt"
+    },
+    {
+      "fr": "vouloir : je veux",
+      "nl": "willen: ik wil"
+    },
+    {
+      "fr": "maintenant",
+      "nl": "nu"
+    },
+    {
+      "fr": "ne ... pas",
+      "nl": "niet, geen"
+    },
+    {
+      "fr": "ne … plus",
+      "nl": "niet meer, geen meer"
+    },
+    {
+      "fr": "rien",
+      "nl": "niets"
+    },
+    {
+      "fr": "tout",
+      "nl": "alles"
+    }
+  ]
+}

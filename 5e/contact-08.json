@@ -1,0 +1,90 @@
+{
+  "id": "contact-08",
+  "name": "Contact 8",
+  "cards": [
+    {
+      "fr": "l’Allemagne",
+      "nl": "Duitsland"
+    },
+    {
+      "fr": "les cheveux",
+      "nl": "de haren"
+    },
+    {
+      "fr": "une couleur",
+      "nl": "een kleur"
+    },
+    {
+      "fr": "l’Italie",
+      "nl": "Italië"
+    },
+    {
+      "fr": "des lunettes",
+      "nl": "een bril"
+    },
+    {
+      "fr": "une photo",
+      "nl": "een foto"
+    },
+    {
+      "fr": "les vacances",
+      "nl": "de vakantie"
+    },
+    {
+      "fr": "des yeux",
+      "nl": "ogen"
+    },
+    {
+      "fr": "porter",
+      "nl": "dragen"
+    },
+    {
+      "fr": "beau, belle",
+      "nl": "mooi"
+    },
+    {
+      "fr": "grand(e)",
+      "nl": "groot"
+    },
+    {
+      "fr": "sympa(thique)",
+      "nl": "sympathiek"
+    },
+    {
+      "fr": "les couleurs",
+      "nl": "de kleuren"
+    },
+    {
+      "fr": "blanc, blanche",
+      "nl": "wit"
+    },
+    {
+      "fr": "bleu(e)",
+      "nl": "blauw"
+    },
+    {
+      "fr": "blond(e)",
+      "nl": "blond"
+    },
+    {
+      "fr": "brun(e)",
+      "nl": "bruin"
+    },
+    {
+      "fr": "jaune",
+      "nl": "geel"
+    },
+    {
+      "fr": "noir(e)",
+      "nl": "zwart"
+    },
+    {
+      "fr": "rouge",
+      "nl": "rood"
+    },
+    {
+      "fr": "vert(e)",
+      "nl": "groen"
+    }
+  ]
+}

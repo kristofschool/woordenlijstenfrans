@@ -1,0 +1,90 @@
+{
+  "id": "contact-02",
+  "name": "Contact 2",
+  "cards": [
+    {
+      "fr": "l'école",
+      "nl": "de school"
+    },
+    {
+      "fr": "la gare",
+      "nl": "het station"
+    },
+    {
+      "fr": "le magasin",
+      "nl": "de winkel"
+    },
+    {
+      "fr": "la maison",
+      "nl": "het huis"
+    },
+    {
+      "fr": "aller",
+      "nl": "gaan"
+    },
+    {
+      "fr": "à (au)",
+      "nl": "naar"
+    },
+    {
+      "fr": "alors",
+      "nl": "dan"
+    },
+    {
+      "fr": "avec",
+      "nl": "met"
+    },
+    {
+      "fr": "de",
+      "nl": "van"
+    },
+    {
+      "fr": "déjà",
+      "nl": "(nu) al"
+    },
+    {
+      "fr": "là",
+      "nl": "daar, er"
+    },
+    {
+      "fr": "le, la, (l')",
+      "nl": "de, het"
+    },
+    {
+      "fr": "où",
+      "nl": "waar"
+    },
+    {
+      "fr": "je",
+      "nl": "ik"
+    },
+    {
+      "fr": "tu",
+      "nl": "jij, je"
+    },
+    {
+      "fr": "il",
+      "nl": "hij"
+    },
+    {
+      "fr": "elle",
+      "nl": "zij, ze"
+    },
+    {
+      "fr": "nous",
+      "nl": "wij, we"
+    },
+    {
+      "fr": "vous",
+      "nl": "jullie, u"
+    },
+    {
+      "fr": "ils",
+      "nl": "zij, ze"
+    },
+    {
+      "fr": "elles",
+      "nl": "zij, ze"
+    }
+  ]
+}

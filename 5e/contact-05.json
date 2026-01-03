@@ -1,0 +1,190 @@
+{
+  "id": "contact-05",
+  "name": "Contact 5",
+  "cards": [
+    {
+      "fr": "un âge",
+      "nl": "een leeftijd"
+    },
+    {
+      "fr": "un an",
+      "nl": "een jaar"
+    },
+    {
+      "fr": "une classe",
+      "nl": "een klas, leerjaar"
+    },
+    {
+      "fr": "une danse",
+      "nl": "een dans"
+    },
+    {
+      "fr": "une fille",
+      "nl": "een meisje"
+    },
+    {
+      "fr": "un frère",
+      "nl": "een broer"
+    },
+    {
+      "fr": "un garçon",
+      "nl": "een jongen"
+    },
+    {
+      "fr": "madame",
+      "nl": "mevrouw"
+    },
+    {
+      "fr": "mademoiselle",
+      "nl": "juffrouw"
+    },
+    {
+      "fr": "monsieur",
+      "nl": "meneer"
+    },
+    {
+      "fr": "une poste",
+      "nl": "een postkantoor"
+    },
+    {
+      "fr": "une sœur",
+      "nl": "een zus"
+    },
+    {
+      "fr": "une tablette",
+      "nl": "een tablet"
+    },
+    {
+      "fr": "adorer",
+      "nl": "zielsveel houden van"
+    },
+    {
+      "fr": "s’appeler",
+      "nl": "heten"
+    },
+    {
+      "fr": "habiter",
+      "nl": "wonen"
+    },
+    {
+      "fr": "jouer",
+      "nl": "spelen"
+    },
+    {
+      "fr": "aussi",
+      "nl": "ook"
+    },
+    {
+      "fr": "combien",
+      "nl": "hoeveel"
+    },
+    {
+      "fr": "encore",
+      "nl": "nog"
+    },
+    {
+      "fr": "près (de)",
+      "nl": "dicht bij"
+    },
+    {
+      "fr": "presque",
+      "nl": "bijna"
+    },
+    {
+      "fr": "quel, quelle",
+      "nl": "welk(e)"
+    },
+    {
+      "fr": "sixième",
+      "nl": "zesde"
+    },
+    {
+      "fr": "sur",
+      "nl": "op"
+    },
+    {
+      "fr": "zéro",
+      "nl": "0"
+    },
+    {
+      "fr": "un",
+      "nl": "1"
+    },
+    {
+      "fr": "deux",
+      "nl": "2"
+    },
+    {
+      "fr": "trois",
+      "nl": "3"
+    },
+    {
+      "fr": "quatre",
+      "nl": "4"
+    },
+    {
+      "fr": "cinq",
+      "nl": "5"
+    },
+    {
+      "fr": "six",
+      "nl": "6"
+    },
+    {
+      "fr": "sept",
+      "nl": "7"
+    },
+    {
+      "fr": "huit",
+      "nl": "8"
+    },
+    {
+      "fr": "neuf",
+      "nl": "9"
+    },
+    {
+      "fr": "dix",
+      "nl": "10"
+    },
+    {
+      "fr": "onze",
+      "nl": "11"
+    },
+    {
+      "fr": "douze",
+      "nl": "12"
+    },
+    {
+      "fr": "treize",
+      "nl": "13"
+    },
+    {
+      "fr": "quatorze",
+      "nl": "14"
+    },
+    {
+      "fr": "quinze",
+      "nl": "15"
+    },
+    {
+      "fr": "seize",
+      "nl": "16"
+    },
+    {
+      "fr": "dix-sept",
+      "nl": "17"
+    },
+    {
+      "fr": "dix-huit",
+      "nl": "18"
+    },
+    {
+      "fr": "dix-neuf",
+      "nl": "19"
+    },
+    {
+      "fr": "vingt",
+      "nl": "20"
+    }
+  ]
+}

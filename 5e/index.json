@@ -1,0 +1,55 @@
+{
+  "year": "5e",
+  "lists": [
+    {
+      "id": "contact-01",
+      "name": "Contact 1",
+      "file": "contact-01.json"
+    },
+    {
+      "id": "contact-02",
+      "name": "Contact 2",
+      "file": "contact-02.json"
+    },
+    {
+      "id": "contact-03",
+      "name": "Contact 3",
+      "file": "contact-03.json"
+    },
+    {
+      "id": "contact-04",
+      "name": "Contact 4",
+      "file": "contact-04.json"
+    },
+    {
+      "id": "contact-05",
+      "name": "Contact 5",
+      "file": "contact-05.json"
+    },
+    {
+      "id": "contact-06",
+      "name": "Contact 6",
+      "file": "contact-06.json"
+    },
+    {
+      "id": "contact-07",
+      "name": "Contact 7",
+      "file": "contact-07.json"
+    },
+    {
+      "id": "contact-08",
+      "name": "Contact 8",
+      "file": "contact-08.json"
+    },
+    {
+      "id": "contact-09",
+      "name": "Contact 9",
+      "file": "contact-09.json"
+    },
+    {
+      "id": "contact-10",
+      "name": "Contact 10",
+      "file": "contact-10.json"
+    }
+  ]
+}

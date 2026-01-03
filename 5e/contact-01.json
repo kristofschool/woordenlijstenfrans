@@ -1,0 +1,86 @@
+{
+  "id": "contact-01",
+  "name": "Contact 1",
+  "cards": [
+    {
+      "fr": "à",
+      "nl": "tot"
+    },
+    {
+      "fr": "bien",
+      "nl": "goed"
+    },
+    {
+      "fr": "ça",
+      "nl": "het, dat"
+    },
+    {
+      "fr": "comment",
+      "nl": "hoe"
+    },
+    {
+      "fr": "et",
+      "nl": "en"
+    },
+    {
+      "fr": "moi",
+      "nl": "ik, (met) mij"
+    },
+    {
+      "fr": "toi",
+      "nl": "jij, je, (met) jou"
+    },
+    {
+      "fr": "très",
+      "nl": "heel, zeer, erg"
+    },
+    {
+      "fr": "bonjour",
+      "nl": "goedendag"
+    },
+    {
+      "fr": "salut",
+      "nl": "hallo, dag"
+    },
+    {
+      "fr": "Ça va?",
+      "nl": "Gaat het?"
+    },
+    {
+      "fr": "Comment ça va?",
+      "nl": "Hoe gaat het?"
+    },
+    {
+      "fr": "Ça va (très) bien.",
+      "nl": "Het gaat (heel) goed."
+    },
+    {
+      "fr": "Au revoir.",
+      "nl": "Tot ziens."
+    },
+    {
+      "fr": "À bientôt.",
+      "nl": "Tot gauw."
+    },
+    {
+      "fr": "À demain.",
+      "nl": "Tot morgen."
+    },
+    {
+      "fr": "À ce soir.",
+      "nl": "Tot vanavond."
+    },
+    {
+      "fr": "Voilà ...",
+      "nl": "Daar heb je …, Daar is / zijn …"
+    },
+    {
+      "fr": "oui",
+      "nl": "ja"
+    },
+    {
+      "fr": "non",
+      "nl": "neen"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "generated": "2026-01-03",
+  "lists": [
+    {
+      "id": "contact-01",
+      "name": "Contact 1",
+      "file": "contact-01.json",
+      "count": 35
+    },
+    {
+      "id": "contact-02",
+      "name": "Contact 2",
+      "file": "contact-02.json",
+      "count": 34
+    },
+    {
+      "id": "contact-03",
+      "name": "Contact 3",
+      "file": "contact-03.json",
+      "count": 25
+    },
+    {
+      "id": "contact-04",
+      "name": "Contact 4",
+      "file": "contact-04.json",
+      "count": 41
+    },
+    {
+      "id": "contact-05",
+      "name": "Contact 5",
+      "file": "contact-05.json",
+      "count": 49
+    },
+    {
+      "id": "contact-06",
+      "name": "Contact 6",
+      "file": "contact-06.json",
+      "count": 45
+    },
+    {
+      "id": "contact-07",
+      "name": "Contact 7",
+      "file": "contact-07.json",
+      "count": 44
+    },
+    {
+      "id": "contact-08",
+      "name": "Contact 8",
+      "file": "contact-08.json",
+      "count": 26
+    },
+    {
+      "id": "contact-09",
+      "name": "Contact 9",
+      "file": "contact-09.json",
+      "count": 34
+    },
+    {
+      "id": "contact-10",
+      "name": "Contact 10",
+      "file": "contact-10.json",
+      "count": 29
+    },
+    {
+      "id": "contact-11",
+      "name": "Contact 11",
+      "file": "contact-11.json",
+      "count": 30
+    },
+    {
+      "id": "contact-12",
+      "name": "Contact 12",
+      "file": "contact-12.json",
+      "count": 55
+    },
+    {
+      "id": "contact-13",
+      "name": "Contact 13",
+      "file": "contact-13.json",
+      "count": 26
+    },
+    {
+      "id": "contact-14",
+      "name": "Contact 14",
+      "file": "contact-14.json",
+      "count": 15
+    },
+    {
+      "id": "revision-contact-01-18",
+      "name": "Revision Contact 1–18",
+      "file": "revision-contact-01-18.json",
+      "count": 428
+    }
+  ]
+}

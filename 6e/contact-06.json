@@ -1,0 +1,114 @@
+{
+  "id": "contact-06",
+  "name": "Contact 6",
+  "cards": [
+    {
+      "fr": "une caisse",
+      "nl": "een kassa"
+    },
+    {
+      "fr": "un choix",
+      "nl": "een keuze"
+    },
+    {
+      "fr": "une mode",
+      "nl": "een mode"
+    },
+    {
+      "fr": "un pantalon",
+      "nl": "een broek"
+    },
+    {
+      "fr": "le prix",
+      "nl": "de prijs"
+    },
+    {
+      "fr": "un pull",
+      "nl": "een trui"
+    },
+    {
+      "fr": "les soldes",
+      "nl": "de uitverkoop"
+    },
+    {
+      "fr": "un vêtement",
+      "nl": "een kledingstuk"
+    },
+    {
+      "fr": "essayer",
+      "nl": "proberen, passen"
+    },
+    {
+      "fr": "fermer",
+      "nl": "sluiten"
+    },
+    {
+      "fr": "court(e)",
+      "nl": "kort"
+    },
+    {
+      "fr": "fermé(e)",
+      "nl": "gesloten"
+    },
+    {
+      "fr": "gris(e)",
+      "nl": "grijs"
+    },
+    {
+      "fr": "long, longue",
+      "nl": "lang"
+    },
+    {
+      "fr": "ouvert(e)",
+      "nl": "open"
+    },
+    {
+      "fr": "parfait(e)",
+      "nl": "perfect"
+    },
+    {
+      "fr": "les couleurs",
+      "nl": "de kleuren"
+    },
+    {
+      "fr": "blanc, blanche",
+      "nl": "wit"
+    },
+    {
+      "fr": "bleu(e)",
+      "nl": "blauw"
+    },
+    {
+      "fr": "brun(e)",
+      "nl": "bruin"
+    },
+    {
+      "fr": "jaune",
+      "nl": "geel"
+    },
+    {
+      "fr": "mauve",
+      "nl": "paars"
+    },
+    {
+      "fr": "noir(e)",
+      "nl": "zwart"
+    },
+    {
+      "fr": "orange",
+      "nl": "oranje"
+    },
+    {
+      "fr": "rose",
+      "nl": "roze"
+    },
+    {
+      "fr": "rouge",
+      "nl": "rood"
+    },
+    {
+      "fr": "vert(e)",
+      "nl": "groen"
+    }
+  ]
+}

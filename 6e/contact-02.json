@@ -2,25 +2,85 @@
   "id": "contact-02",
   "name": "Contact 2",
   "cards": [
-    { "fr": "une année", "nl": "een jaar" },
-    { "fr": "un arbre", "nl": "een boom" },
-    { "fr": "un banc", "nl": "een (school)bank" },
-    { "fr": "un coin", "nl": "een hoek" },
-    { "fr": "un directeur", "nl": "een directeur" },
-    { "fr": "un élève", "nl": "een leerling" },
-    { "fr": "une élève", "nl": "een leerlinge" },
-    { "fr": "un kilomètre", "nl": "een kilometer" },
-    { "fr": "le néerlandais", "nl": "het Nederlands" },
-    { "fr": "un prénom", "nl": "een voornaam" },
-    { "fr": "un tableau", "nl": "een schoolbord" },
-    { "fr": "apprendre", "nl": "(aan)leren" },
-    { "fr": "conduire : il me conduit", "nl": "brengen : hij brengt mij" },
-    { "fr": "dire", "nl": "zeggen" },
-    { "fr": "travailler", "nl": "werken" },
-    { "fr": "voir : tu vois ?", "nl": "zien : zie je?" },
-    { "fr": "belge", "nl": "Belgisch" },
-    { "fr": "chaque", "nl": "elk(e), ieder(e)" },
-    { "fr": "entre", "nl": "tussen" },
-    { "fr": "même", "nl": "zelfde" }
+    {
+      "fr": "une année",
+      "nl": "een jaar"
+    },
+    {
+      "fr": "un arbre",
+      "nl": "een boom"
+    },
+    {
+      "fr": "un banc",
+      "nl": "een (school)bank"
+    },
+    {
+      "fr": "un coin",
+      "nl": "een hoek"
+    },
+    {
+      "fr": "un directeur",
+      "nl": "een directeur"
+    },
+    {
+      "fr": "un élève",
+      "nl": "een leerling"
+    },
+    {
+      "fr": "une élève",
+      "nl": "een leerlinge"
+    },
+    {
+      "fr": "un kilomètre",
+      "nl": "een kilometer"
+    },
+    {
+      "fr": "le néerlandais",
+      "nl": "het Nederlands"
+    },
+    {
+      "fr": "un prénom",
+      "nl": "een voornaam"
+    },
+    {
+      "fr": "un tableau",
+      "nl": "een schoolbord"
+    },
+    {
+      "fr": "apprendre",
+      "nl": "(aan)leren"
+    },
+    {
+      "fr": "conduire : il me conduit",
+      "nl": "brengen : hij brengt mij"
+    },
+    {
+      "fr": "dire",
+      "nl": "zeggen"
+    },
+    {
+      "fr": "travailler",
+      "nl": "werken"
+    },
+    {
+      "fr": "voir : tu vois ?",
+      "nl": "zien : zie je?"
+    },
+    {
+      "fr": "belge",
+      "nl": "Belgisch"
+    },
+    {
+      "fr": "chaque",
+      "nl": "elk(e), ieder(e)"
+    },
+    {
+      "fr": "entre",
+      "nl": "tussen"
+    },
+    {
+      "fr": "même",
+      "nl": "zelfde"
+    }
   ]
 }

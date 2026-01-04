@@ -1,0 +1,70 @@
+{
+  "id": "contact-08",
+  "name": "Contact 8",
+  "cards": [
+    {
+      "fr": "un bonnet",
+      "nl": "een (bad)muts"
+    },
+    {
+      "fr": "un café",
+      "nl": "een café"
+    },
+    {
+      "fr": "une douche",
+      "nl": "een douche"
+    },
+    {
+      "fr": "une glace",
+      "nl": "een ijsje"
+    },
+    {
+      "fr": "une sortie",
+      "nl": "een uitgang"
+    },
+    {
+      "fr": "un toboggan",
+      "nl": "een (water)glijbaan"
+    },
+    {
+      "fr": "attendre",
+      "nl": "wachten"
+    },
+    {
+      "fr": "descendre",
+      "nl": "(af)dalen"
+    },
+    {
+      "fr": "s'habiller",
+      "nl": "zich (aan)kleden"
+    },
+    {
+      "fr": "nager",
+      "nl": "zwemmen"
+    },
+    {
+      "fr": "sauter",
+      "nl": "springen"
+    },
+    {
+      "fr": "vendre",
+      "nl": "verkopen"
+    },
+    {
+      "fr": "voir",
+      "nl": "zien, bezoeken, begrijpen"
+    },
+    {
+      "fr": "dangereux, dangereuse",
+      "nl": "gevaarlijk"
+    },
+    {
+      "fr": "fatigué(e)",
+      "nl": "moe"
+    },
+    {
+      "fr": "tout de suite",
+      "nl": "onmiddellijk"
+    }
+  ]
+}

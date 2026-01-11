@@ -1,0 +1,22 @@
+{
+  "aimer": {
+    "present": ["aime", "aimes", "aime", "aime", "aimons", "aimez", "aiment", "aiment"],
+    "futur_proche": ["vais aimer", "vas aimer", "va aimer", "va aimer", "allons aimer", "allez aimer", "vont aimer", "vont aimer"],
+    "passe_compose": ["ai aimé", "as aimé", "a aimé", "a aimé", "avons aimé", "avez aimé", "ont aimé", "ont aimé"]
+  },
+  "aller": {
+    "present": ["vais", "vas", "va", "va", "allons", "allez", "vont", "vont"],
+    "futur_proche": ["vais aller", "vas aller", "va aller", "va aller", "allons aller", "allez aller", "vont aller", "vont aller"],
+    "passe_compose": ["suis allé", "es allé", "est allé", "est allée", "sommes allés", "êtes allés", "sont allés", "sont allées"]
+  },
+  "partir": {
+    "present": ["pars", "pars", "part", "part", "partons", "partez", "partent", "partent"],
+    "futur_proche": ["vais partir", "vas partir", "va partir", "va partir", "allons partir", "allez partir", "vont partir", "vont partir"],
+    "passe_compose": ["suis parti", "es parti", "est parti", "est partie", "sommes partis", "êtes partis", "sont partis", "sont parties"]
+  },
+  "s'appeler": {
+    "present": ["m'appelle", "t'appelles", "s'appelle", "s'appelle", "nous appelons", "vous appelez", "s'appellent", "s'appellent"],
+    "futur_proche": ["vais m'appeler", "vas t'appeler", "va s'appeler", "va s'appeler", "allons nous appeler", "allez vous appeler", "vont s'appeler", "vont s'appeler"],
+    "passe_compose": ["me suis appelé", "t'es appelé", "s'est appelé", "s'est appelée", "nous sommes appelés", "vous êtes appelés", "se sont appelés", "se zijn appelées"]
+  }
+}

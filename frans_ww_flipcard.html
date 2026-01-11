@@ -6,10 +6,7 @@
     <title>Franse Werkwoorden Trainer</title>
     <style>
         :root { 
-            --primary: #007bff; 
-            --success: #28a745; 
-            --danger: #dc3545; 
-            --bg: #f8f9fa;
+            --primary: #007bff; --success: #28a745; --danger: #dc3545; --bg: #f8f9fa;
         }
         body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg); display: flex; flex-direction: column; align-items: center; margin: 0; padding: 20px; }
         .container { max-width: 650px; width: 100%; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center; }
@@ -18,64 +15,57 @@
         .option-group { border: 1px solid #e0e0e0; padding: 15px; border-radius: 12px; margin-bottom: 20px; text-align: left; }
         .option-group h3 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
 
-        /* Werkwoorden lijst */
-        .verb-selection-list { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
-            gap: 10px; 
-            max-height: 250px; 
-            overflow-y: auto; 
-            border: 1px solid #eee; 
-            padding: 10px; 
-            border-radius: 8px;
-            background: #fff;
-        }
-        .verb-item { font-size: 0.9rem; display: flex; align-items: center; gap: 5px; cursor: pointer; }
+        .verb-selection-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; max-height: 200px; overflow-y: auto; border: 1px solid #eee; padding: 10px; border-radius: 8px; background: #fff; }
+        .verb-item { font-size: 0.85rem; display: flex; align-items: center; gap: 5px; cursor: pointer; }
 
-        /* Progress Bar */
         .progress-container { width: 100%; background: #eee; border-radius: 10px; height: 10px; margin-bottom: 20px; overflow: hidden; }
         .progress-bar { height: 100%; background: var(--success); width: 0%; transition: width 0.3s; }
 
-        /* Flip Card */
-        .card-perspective { perspective: 1000px; width: 320px; height: 200px; margin: 20px auto; }
+        .card-perspective { perspective: 1000px; width: 320px; height: 180px; margin: 20px auto; }
         .card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d; cursor: pointer; }
         .card-inner.is-flipped { transform: rotateY(180deg); }
         .card-face { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 15px; border: 2px solid var(--primary); box-shadow: 0 4px 15px rgba(0,0,0,0.1); box-sizing: border-box; }
         .card-front { background: white; color: #333; }
-        .card-back { background: var(--primary); color: white; transform: rotateY(180deg); font-size: 1.6rem; font-weight: bold; padding: 20px; }
+        .card-back { background: var(--primary); color: white; transform: rotateY(180deg); font-size: 1.5rem; font-weight: bold; padding: 15px; }
 
         .answer-input { width: 90%; padding: 15px; font-size: 1.3rem; border: 2px solid #dfe6e9; border-radius: 10px; text-align: center; outline: none; }
         .correct { border-color: var(--success) !important; background-color: #f0fff4; }
         .wrong { border-color: var(--danger) !important; background-color: #fff5f5; }
 
-        .keyboard { display: flex; gap: 5px; justify-content: center; margin: 15px 0; flex-wrap: wrap; }
-        .key { padding: 10px 14px; background: #eee; border-radius: 8px; cursor: pointer; font-weight: bold; border: 1px solid #ccc; }
+        .keyboard { display: flex; gap: 5px; justify-content: center; margin: 10px 0; flex-wrap: wrap; }
+        .key { padding: 8px 12px; background: #eee; border-radius: 8px; cursor: pointer; font-weight: bold; border: 1px solid #ccc; font-size: 0.9rem; }
 
-        button { padding: 12px 25px; font-size: 1rem; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; margin: 5px; }
+        button { padding: 12px 20px; font-size: 1rem; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; }
         .btn-start { background: var(--success); color: white; width: 100%; }
         .btn-check { background: var(--primary); color: white; width: 100%; }
         #next-btn { background: #333; color: white; margin-top: 15px; display: none; }
+
+        /* Rapport Styling */
+        .error-list { text-align: left; margin-top: 20px; border-top: 2px solid #eee; padding-top: 20px; }
+        .error-item { margin-bottom: 10px; padding: 10px; background: #fff5f5; border-radius: 8px; border-left: 4px solid var(--danger); font-size: 0.9rem; }
+        .error-item b { color: var(--danger); }
+        .error-item i { color: #666; }
     </style>
 </head>
 <body>
 
 <div class="container" id="setup-screen">
-    <h1>🇫🇷 Franse Werkwoorden</h1>
+    <h1>🇫🇷 Werkwoorden Trainer</h1>
     
     <div class="option-group">
         <h3>1. Kies Jaar</h3>
         <select id="year-select" onchange="fetchVerbList()" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
-            <option value="" disabled selected>Kies een jaar...</option>
-            <option value="5e/jaar5.json">5de Jaar</option>
-            <option value="6e/jaar6.json">6de Jaar</option>
+            <option value="" disabled selected>Selecteer een jaar...</option>
+            <option value="jaar5.json">5de Jaar</option>
+            <option value="jaar6.json">6de Jaar</option>
         </select>
     </div>
 
     <div id="verb-list-container" class="option-group hidden">
-        <h3>2. Selecteer Werkwoorden (<span id="count-display">0</span>)</h3>
+        <h3>2. Kies Werkwoorden (<span id="count-display">0</span>)</h3>
         <div style="margin-bottom: 10px;">
-            <button onclick="toggleAllVerbs(true)" style="padding: 5px 10px; font-size: 0.8rem;">Alles selecteren</button>
-            <button onclick="toggleAllVerbs(false)" style="padding: 5px 10px; font-size: 0.8rem;">Niets selecteren</button>
+            <button onclick="toggleAllVerbs(true)" style="padding: 5px 10px; font-size: 0.7rem;">Alles</button>
+            <button onclick="toggleAllVerbs(false)" style="padding: 5px 10px; font-size: 0.7rem;">Niets</button>
         </div>
         <div id="verb-checkboxes" class="verb-selection-list"></div>
     </div>
@@ -88,55 +78,57 @@
             <label><input type="checkbox" class="tense-check" value="passe_compose"> Passé Composé</label>
         </div>
         <div class="option-group">
-            <h3>4. Instellingen</h3>
+            <h3>4. Opties</h3>
             <label><input type="radio" name="mode" value="type" checked> Typen</label><br>
             <label><input type="radio" name="mode" value="flashcard"> Flashcards</label>
             <hr>
-            Vragen: <input type="number" id="question-limit" value="10" min="1" max="50" style="width: 50px; padding: 5px;">
+            Vragen: <input type="number" id="question-limit" value="10" min="1" max="50" style="width: 45px;">
         </div>
     </div>
-    <button class="btn-start" onclick="startPractice()">Start de oefeningen</button>
+    <button class="btn-start" onclick="startPractice()">Start Training</button>
 </div>
 
 <div class="container hidden" id="practice-screen">
     <div class="progress-container"><div id="progress-bar" class="progress-bar"></div></div>
-    <div id="tense-indicator" style="font-weight: bold; color: var(--primary); text-transform: uppercase;"></div>
+    <div id="tense-indicator" style="font-weight: bold; color: var(--primary); letter-spacing: 1px;"></div>
     
     <div class="card-perspective">
         <div class="card-inner" id="card-inner" onclick="toggleFlip()">
             <div class="card-face card-front">
-                <div id="sub-display" style="font-size: 2.2rem; font-weight: bold;"></div>
-                <div id="verb-display" style="font-style: italic; color: #636e72;"></div>
+                <div id="sub-display" style="font-size: 2rem; font-weight: bold;"></div>
+                <div id="verb-display" style="font-style: italic; color: #666;"></div>
+                <div style="font-size: 0.6rem; margin-top: 15px; color: #ccc;">KLIK OM TE DRAAIEN</div>
             </div>
             <div class="card-face card-back" id="card-back-text"></div>
         </div>
     </div>
 
     <div id="type-ui" class="hidden">
-        <input type="text" id="answer-input" class="answer-input" placeholder="Typ je antwoord..." autocomplete="off">
+        <input type="text" id="answer-input" class="answer-input" placeholder="Antwoord..." autocomplete="off">
         <div class="keyboard" id="kb"></div>
-        <div id="feedback" style="margin: 10px; font-weight: bold; min-height: 1.5em;"></div>
+        <div id="feedback" style="margin: 10px; font-weight: bold; min-height: 1.2em;"></div>
         <button class="btn-check" id="check-btn" onclick="checkAnswer()">Controleer</button>
     </div>
 
-    <button id="next-btn" onclick="nextQuestion()">Volgende vraag →</button>
-    <br>
-    <button onclick="location.reload()" style="background:none; color:#b2bec3; text-decoration: underline; font-size: 0.8rem;">Menu</button>
+    <button id="next-btn" onclick="nextQuestion()">Volgende →</button>
 </div>
 
 <div class="container hidden" id="result-screen">
-    <h2>Klaar! 🎉</h2>
-    <p id="final-score" style="font-size: 1.8rem; font-weight: bold; color: var(--primary);"></p>
-    <button class="btn-start" onclick="location.reload()">Opnieuw</button>
+    <h2>Sessie Rapport 🎉</h2>
+    <div id="final-score" style="font-size: 2rem; font-weight: bold; color: var(--primary); margin-bottom: 10px;"></div>
+    <div id="error-report" class="error-list"></div>
+    <button class="btn-start" onclick="location.reload()" style="margin-top: 20px;">Opnieuw Oefenen</button>
 </div>
 
 <script>
     let fullVerbData = {}, selectedVerbs = [], selectedTenses = [], currentAnswer = "", mode = "type";
     let questionsDone = 0, totalQuestions = 10, correctAnswers = 0;
+    let sessionErrors = []; // Om fouten bij te houden
+    let currentVerb = "", currentTense = "", currentSubject = "";
+
     const subjects = ["Je", "Tu", "Il", "Elle", "Nous", "Vous", "Ils", "Elles"];
     const accents = ['é', 'è', 'à', 'â', 'ê', 'î', 'ô', 'û', 'ç', 'ë', 'ï'];
 
-    // Toetsenbord
     const kb = document.getElementById('kb');
     accents.forEach(char => {
         let btn = document.createElement('div'); btn.className = 'key'; btn.innerText = char;
@@ -144,7 +136,6 @@
         kb.appendChild(btn);
     });
 
-    // LAAD DE LIJST MET WERKWOORDEN
     async function fetchVerbList() {
         const file = document.getElementById('year-select').value;
         try {
@@ -152,22 +143,19 @@
             fullVerbData = await res.json();
             const container = document.getElementById('verb-checkboxes');
             container.innerHTML = "";
-            
             Object.keys(fullVerbData).forEach(verb => {
                 const label = document.createElement('label');
                 label.className = "verb-item";
                 label.innerHTML = `<input type="checkbox" class="verb-select" value="${verb}" checked onchange="updateCount()"> ${verb}`;
                 container.appendChild(label);
             });
-            
             document.getElementById('verb-list-container').classList.remove('hidden');
             updateCount();
-        } catch (e) { alert("Bestand niet gevonden."); }
+        } catch (e) { alert("Kon bestand niet laden."); }
     }
 
     function updateCount() {
-        const count = document.querySelectorAll('.verb-select:checked').length;
-        document.getElementById('count-display').innerText = count;
+        document.getElementById('count-display').innerText = document.querySelectorAll('.verb-select:checked').length;
     }
 
     function toggleAllVerbs(state) {
@@ -181,7 +169,7 @@
         mode = document.querySelector('input[name="mode"]:checked').value;
         totalQuestions = parseInt(document.getElementById('question-limit').value);
 
-        if (selectedVerbs.length === 0 || selectedTenses.length === 0) return alert("Selecteer minstens één werkwoord en één tijd.");
+        if (selectedVerbs.length === 0 || selectedTenses.length === 0) return alert("Maak een selectie.");
 
         document.getElementById('setup-screen').classList.add('hidden');
         document.getElementById('practice-screen').classList.remove('hidden');
@@ -190,26 +178,34 @@
     }
 
     function toggleFlip() {
-        const card = document.getElementById('card-inner');
-        card.classList.toggle('is-flipped');
-        if(mode === 'flashcard' && card.classList.contains('is-flipped')) document.getElementById('next-btn').style.display = "inline-block";
+        document.getElementById('card-inner').classList.toggle('is-flipped');
+        if(mode === 'flashcard' && document.getElementById('card-inner').classList.contains('is-flipped')) {
+            document.getElementById('next-btn').style.display = "inline-block";
+        }
     }
 
     function nextQuestion() {
         if (questionsDone >= totalQuestions) return showResults();
+        
         const card = document.getElementById('card-inner');
         card.classList.remove('is-flipped');
 
         setTimeout(() => {
-            const verb = selectedVerbs[Math.floor(Math.random() * selectedVerbs.length)];
-            const tense = selectedTenses[Math.floor(Math.random() * selectedTenses.length)];
+            currentVerb = selectedVerbs[Math.floor(Math.random() * selectedVerbs.length)];
+            currentTense = selectedTenses[Math.floor(Math.random() * selectedTenses.length)];
             const subIdx = Math.floor(Math.random() * 8);
+            currentAnswer = fullVerbData[currentVerb][currentTense][subIdx];
 
-            currentAnswer = fullVerbData[verb][tense][subIdx];
+            // ELISIE LOGICA (Je -> J')
+            currentSubject = subjects[subIdx];
+            const klinkers = ['a', 'e', 'i', 'o', 'u', 'y', 'h', 'é', 'è', 'â'];
+            if (subIdx === 0 && klinkers.includes(currentAnswer.toLowerCase().charAt(0))) {
+                currentSubject = "J'";
+            }
 
-            document.getElementById('tense-indicator').innerText = tense.replace('_', ' ');
-            document.getElementById('sub-display').innerText = subjects[subIdx];
-            document.getElementById('verb-display').innerText = `(${verb})`;
+            document.getElementById('tense-indicator').innerText = currentTense.replace('_', ' ').toUpperCase();
+            document.getElementById('sub-display').innerText = currentSubject + (currentSubject === "J'" ? "" : " ");
+            document.getElementById('verb-display').innerText = `(${currentVerb})`;
             document.getElementById('card-back-text').innerText = currentAnswer;
             
             document.getElementById('progress-bar').style.width = (questionsDone / totalQuestions * 100) + "%";
@@ -224,6 +220,7 @@
     function checkAnswer() {
         const input = document.getElementById('answer-input');
         const userVal = input.value.trim().toLowerCase();
+        
         if (userVal === currentAnswer.toLowerCase()) {
             input.className = "answer-input correct";
             document.getElementById('feedback').innerText = "Correct! 🎉";
@@ -231,6 +228,12 @@
         } else {
             input.className = "answer-input wrong";
             document.getElementById('feedback').innerHTML = `Fout. Het is: <span style="color:var(--primary)">${currentAnswer}</span>`;
+            // Fout opslaan voor rapport
+            sessionErrors.push({
+                q: `${currentSubject}${currentSubject === "J'" ? "" : " "} (${currentVerb}, ${currentTense})`,
+                a: currentAnswer,
+                u: userVal || "(geen antwoord)"
+            });
         }
         questionsDone++;
         document.getElementById('next-btn').style.display = "inline-block";
@@ -241,11 +244,24 @@
         document.getElementById('practice-screen').classList.add('hidden');
         document.getElementById('result-screen').classList.remove('hidden');
         document.getElementById('final-score').innerText = `${correctAnswers} / ${totalQuestions}`;
+        
+        const reportDiv = document.getElementById('error-report');
+        if (sessionErrors.length > 0) {
+            reportDiv.innerHTML = "<h3>Overzicht van foutjes:</h3>";
+            sessionErrors.forEach(err => {
+                const div = document.createElement('div');
+                div.className = "error-item";
+                div.innerHTML = `Vraag: <i>${err.q}</i><br>Jouw antwoord: <s>${err.u}</s><br><b>Correct antwoord: ${err.a}</b>`;
+                reportDiv.appendChild(div);
+            });
+        } else {
+            reportDiv.innerHTML = "<h3>Perfect gedaan! Geen enkele fout. 🏆</h3>";
+        }
     }
 
     document.getElementById('answer-input').addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
-            if(document.getElementById('next-btn').style.display === "none") checkAnswer();
+            if(document.getElementById('next-btn').style.display === "none" && mode === 'type') checkAnswer();
             else nextQuestion();
         }
     });

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
@@ -11,50 +11,53 @@
             --danger: #dc3545; 
             --bg: #f8f9fa;
         }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg); display: flex; flex-direction: column; align-items: center; margin: 0; padding: 20px; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg); display: flex; flex-direction: column; align-items: center; margin: 0; padding: 20px; }
         .container { max-width: 650px; width: 100%; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center; }
         .hidden { display: none; }
         
-        h1 { color: #333; margin-bottom: 25px; }
         .option-group { border: 1px solid #e0e0e0; padding: 15px; border-radius: 12px; margin-bottom: 20px; text-align: left; }
         .option-group h3 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
 
-        /* Vraagstelling */
-        .tense-badge { display: inline-block; padding: 5px 15px; background: #e7f3ff; color: var(--primary); border-radius: 20px; font-weight: bold; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
-        .question-display { font-size: 2rem; margin-bottom: 20px; color: #2d3436; }
-        .verb-infinitief { color: #636e72; font-style: italic; font-size: 1.2rem; }
+        /* Progress Bar */
+        .progress-container { width: 100%; background: #eee; border-radius: 10px; height: 10px; margin-bottom: 20px; overflow: hidden; }
+        .progress-bar { height: 100%; background: var(--success); width: 0%; transition: width 0.3s; }
 
-        /* Input & Feedback */
-        .answer-input { width: 90%; padding: 15px; font-size: 1.3rem; border: 2px solid #dfe6e9; border-radius: 10px; text-align: center; outline: none; transition: 0.3s; }
-        .answer-input:focus { border-color: var(--primary); }
+        /* Flip Card Animatie */
+        .card-perspective { perspective: 1000px; width: 320px; height: 200px; margin: 20px auto; }
+        .card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.6s; transform-style: preserve-3d; cursor: pointer; }
+        .card-inner.is-flipped { transform: rotateY(180deg); }
+        .card-face { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 15px; border: 2px solid var(--primary); box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 10px; box-sizing: border-box; }
+        .card-front { background: white; color: #333; }
+        .card-back { background: var(--primary); color: white; transform: rotateY(180deg); font-size: 1.8rem; font-weight: bold; }
+
+        /* Typen Mode */
+        .answer-input { width: 90%; padding: 15px; font-size: 1.3rem; border: 2px solid #dfe6e9; border-radius: 10px; text-align: center; outline: none; }
         .correct { border-color: var(--success) !important; background-color: #f0fff4; }
         .wrong { border-color: var(--danger) !important; background-color: #fff5f5; }
-        #feedback { margin: 15px 0; font-weight: bold; min-height: 1.5em; }
 
-        /* Toetsenbord */
-        .keyboard { display: flex; gap: 8px; justify-content: center; margin: 20px 0; flex-wrap: wrap; }
-        .key { padding: 10px 14px; background: white; border: 1px solid #ddd; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 1.1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        .key:hover { background: #f1f1f1; transform: translateY(-2px); }
+        /* Keyboard */
+        .keyboard { display: flex; gap: 5px; justify-content: center; margin: 15px 0; flex-wrap: wrap; }
+        .key { padding: 8px 12px; background: #eee; border-radius: 5px; cursor: pointer; font-weight: bold; border: 1px solid #ccc; }
 
-        /* Knoppen */
-        button { padding: 12px 25px; font-size: 1rem; border: none; border-radius: 8px; cursor: pointer; transition: 0.2s; font-weight: 600; }
-        .btn-start { background: var(--success); color: white; width: 100%; font-size: 1.2rem; }
-        .btn-check { background: var(--primary); color: white; width: 100%; margin-top: 10px; }
-        .btn-next { background: #dfe6e9; color: #2d3436; margin-top: 20px; }
-        .btn-reset { background: transparent; color: #b2bec3; text-decoration: underline; margin-top: 15px; font-size: 0.9rem; }
+        button { padding: 12px 25px; font-size: 1rem; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; margin: 5px; }
+        .btn-start { background: var(--success); color: white; width: 100%; }
+        .btn-check { background: var(--primary); color: white; width: 100%; }
     </style>
 </head>
 <body>
 
 <div class="container" id="setup-screen">
-    <h1>🇫🇷 Werkwoorden Oefenen</h1>
+    <h1>🇫🇷 Instellingen</h1>
     
     <div class="option-group">
-        <h3>1. Selecteer Jaar</h3>
-        <select id="year-select" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
-            <option value="5e/jaar5.json">5de Jaar (Aimer, Etre, Avoir, ...)</option>
-            <option value="6e/jaar6.json">6de Jaar</option>
-        </select>
+        <h3>1. Kies Jaar & Aantal</h3>
+        <div style="display:flex; gap: 10px;">
+            <select id="year-select" style="flex:2; padding: 10px;">
+                <option value="5e/jaar5.json">5de Jaar</option>
+                <option value="6e/jaar6.json">6de Jaar</option>
+            </select>
+            <input type="number" id="question-limit" value="10" min="1" max="50" style="flex:1; padding: 10px;" title="Aantal vragen">
+        </div>
     </div>
 
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
@@ -67,145 +70,144 @@
         <div class="option-group">
             <h3>3. Modus</h3>
             <label><input type="radio" name="mode" value="type" checked> Typen</label><br>
-            <label><input type="radio" name="mode" value="flashcard"> Flashcard</label>
+            <label><input type="radio" name="mode" value="flashcard"> Flashcards</label>
         </div>
     </div>
-    
     <button class="btn-start" onclick="loadAndStart()">Start Training</button>
 </div>
 
 <div class="container hidden" id="practice-screen">
-    <div id="tense-indicator" class="tense-badge"></div>
+    <div class="progress-container"><div id="progress-bar" class="progress-bar"></div></div>
+    <div id="tense-indicator" style="font-weight: bold; color: var(--primary); margin-bottom: 5px;"></div>
     
-    <div class="question-display">
-        <span id="sub-display" style="font-weight: bold;"></span> 
-        <span id="verb-display" class="verb-infinitief"></span>
+    <div class="card-perspective" id="card-box" onclick="handleCardClick()">
+        <div class="card-inner" id="card-inner">
+            <div class="card-face card-front">
+                <div id="sub-display" style="font-size: 2rem; font-weight: bold;"></div>
+                <div id="verb-display" style="font-style: italic; color: #666;"></div>
+                <div id="click-hint" style="font-size: 0.8rem; margin-top: 20px; color: #999;">KLIK OM TE DRAAIEN</div>
+            </div>
+            <div class="card-face card-back" id="card-back-text"></div>
+        </div>
     </div>
 
-    <div id="type-mode-ui">
-        <input type="text" id="answer-input" class="answer-input" placeholder="Typ de vervoeging..." autocomplete="off">
+    <div id="type-ui" class="hidden">
+        <input type="text" id="answer-input" class="answer-input" placeholder="Antwoord..." autocomplete="off">
         <div class="keyboard" id="kb"></div>
-        <div id="feedback"></div>
+        <div id="feedback" style="margin: 10px; font-weight: bold; min-height: 1.5em;"></div>
         <button class="btn-check" id="check-btn" onclick="checkAnswer()">Controleer</button>
     </div>
 
-    <div id="flash-mode-ui" class="hidden">
-        <div id="flash-answer" style="font-size: 2rem; margin: 30px 0; color: var(--success); font-weight: bold; min-height: 1.2em; visibility: hidden;"></div>
-        <button class="btn-check" onclick="document.getElementById('flash-answer').style.visibility='visible'">Toon antwoord</button>
-    </div>
+    <button id="next-btn" onclick="nextQuestion()" style="background:#eee; display:none;">Volgende vraag →</button>
+    <button onclick="location.reload()" style="background:none; color:#999; text-decoration: underline;">Stoppen</button>
+</div>
 
-    <button class="btn-next" id="next-btn" onclick="nextQuestion()">Volgende vraag →</button>
-    <br>
-    <button class="btn-reset" onclick="location.reload()">Stop en ga terug</button>
+<div class="container hidden" id="result-screen">
+    <h2>Klaar! 🎉</h2>
+    <p id="final-score" style="font-size: 1.5rem;"></p>
+    <button class="btn-start" onclick="location.reload()">Opnieuw Oefenen</button>
 </div>
 
 <script>
-    let verbData = {};
-    let selectedTenses = [];
-    let currentAnswer = "";
-    let mode = "type";
-    
-    // De lijst met 8 onderwerpen voor M/V onderscheid
+    let verbData = {}, selectedTenses = [], currentAnswer = "", mode = "type";
+    let questionsDone = 0, totalQuestions = 10, correctAnswers = 0;
     const subjects = ["Je", "Tu", "Il", "Elle", "Nous", "Vous", "Ils", "Elles"];
     const accents = ['é', 'è', 'à', 'â', 'ê', 'î', 'ô', 'û', 'ç', 'ë', 'ï'];
 
-    // Toetsenbord genereren
+    // Toetsenbord
     const kb = document.getElementById('kb');
     accents.forEach(char => {
-        let btn = document.createElement('div');
-        btn.className = 'key';
-        btn.innerText = char;
-        btn.onclick = () => { 
-            const input = document.getElementById('answer-input');
-            input.value += char; 
-            input.focus(); 
-        };
+        let btn = document.createElement('div'); btn.className = 'key'; btn.innerText = char;
+        btn.onclick = (e) => { e.stopPropagation(); document.getElementById('answer-input').value += char; document.getElementById('answer-input').focus(); };
         kb.appendChild(btn);
     });
 
     async function loadAndStart() {
         const file = document.getElementById('year-select').value;
+        totalQuestions = parseInt(document.getElementById('question-limit').value);
         selectedTenses = Array.from(document.querySelectorAll('.tense-check:checked')).map(cb => cb.value);
         mode = document.querySelector('input[name="mode"]:checked').value;
 
-        if (selectedTenses.length === 0) return alert("Kies a.u.b. ten minste één tijd.");
+        if (selectedTenses.length === 0) return alert("Kies een tijd!");
 
         try {
-            const response = await fetch(file);
-            if (!response.ok) throw new Error();
-            verbData = await response.json();
-            
+            const res = await fetch(file);
+            verbData = await res.json();
             document.getElementById('setup-screen').classList.add('hidden');
             document.getElementById('practice-screen').classList.remove('hidden');
-            
-            if(mode === 'flashcard') {
-                document.getElementById('type-mode-ui').classList.add('hidden');
-                document.getElementById('flash-mode-ui').classList.remove('hidden');
+            if(mode === 'type') {
+                document.getElementById('type-ui').classList.remove('hidden');
+                document.getElementById('click-hint').classList.add('hidden');
             }
-            
             nextQuestion();
-        } catch (e) {
-            alert("Kan het bestand " + file + " niet vinden. Zorg dat het in dezelfde map staat.");
-        }
+        } catch (e) { alert("Bestand niet gevonden op GitHub!"); }
     }
 
     function nextQuestion() {
+        if (questionsDone >= totalQuestions) return showResults();
+
+        // Reset Card & Input
+        document.getElementById('card-inner').classList.remove('is-flipped');
+        document.getElementById('answer-input').value = "";
+        document.getElementById('answer-input').className = "answer-input";
+        document.getElementById('feedback').innerText = "";
+        document.getElementById('next-btn').style.display = "none";
+
         const verbs = Object.keys(verbData);
         const verb = verbs[Math.floor(Math.random() * verbs.length)];
         const tense = selectedTenses[Math.floor(Math.random() * selectedTenses.length)];
-        
-        // Kies een getal van 0 tot 7 (voor de 8 subjects)
         const subIdx = Math.floor(Math.random() * 8);
 
         currentAnswer = verbData[verb][tense][subIdx];
-        
-        // UI Update
-        document.getElementById('tense-indicator').innerText = tense.replace('_', ' ');
-        document.getElementById('sub-display').innerText = subjects[subIdx];
-        document.getElementById('verb-display').innerText = `(${verb})`;
-        
-        // Reset elementen
-        const input = document.getElementById('answer-input');
-        input.value = "";
-        input.className = "answer-input";
-        input.disabled = false;
-        document.getElementById('feedback').innerText = "";
-        document.getElementById('flash-answer').innerText = currentAnswer;
-        document.getElementById('flash-answer').style.visibility = 'hidden';
-        
-        if (mode === 'type') setTimeout(() => input.focus(), 100);
+
+        // Update UI met kleine vertraging voor animatie
+        setTimeout(() => {
+            document.getElementById('tense-indicator').innerText = tense.replace('_', ' ').toUpperCase();
+            document.getElementById('sub-display').innerText = subjects[subIdx];
+            document.getElementById('verb-display').innerText = `(${verb})`;
+            document.getElementById('card-back-text').innerText = currentAnswer;
+            document.getElementById('progress-bar').style.width = (questionsDone / totalQuestions * 100) + "%";
+        }, 300);
     }
 
     function checkAnswer() {
         const input = document.getElementById('answer-input');
-        const feedback = document.getElementById('feedback');
-        const userValue = input.value.trim().toLowerCase();
-        const correctValue = currentAnswer.toLowerCase();
-
-        if (userValue === correctValue) {
+        const userVal = input.value.trim().toLowerCase();
+        if (userVal === currentAnswer.toLowerCase()) {
             input.className = "answer-input correct";
-            feedback.innerText = "Correct! 🎉";
-            feedback.style.color = "var(--success)";
-            input.disabled = true;
+            document.getElementById('feedback').innerText = "Correct!";
+            correctAnswers++;
         } else {
             input.className = "answer-input wrong";
-            feedback.innerHTML = `Fout. Het juiste antwoord is: <span style="color:var(--primary)">${currentAnswer}</span>`;
-            feedback.style.color = "var(--danger)";
+            document.getElementById('feedback').innerText = "Fout! Antwoord: " + currentAnswer;
+        }
+        questionsDone++;
+        document.getElementById('next-btn').style.display = "inline-block";
+    }
+
+    function handleCardClick() {
+        if(mode === 'flashcard') {
+            const card = document.getElementById('card-inner');
+            if(!card.classList.contains('is-flipped')) {
+                card.classList.add('is-flipped');
+                questionsDone++;
+                document.getElementById('next-btn').style.display = "inline-block";
+            }
         }
     }
 
-    // Luister naar Enter-toets
+    function showResults() {
+        document.getElementById('practice-screen').classList.add('hidden');
+        document.getElementById('result-screen').classList.remove('hidden');
+        document.getElementById('final-score').innerText = `Je scoorde ${correctAnswers} van de ${totalQuestions}!`;
+    }
+
     document.getElementById('answer-input').addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
-            const input = document.getElementById('answer-input');
-            if (input.className.includes('correct')) {
-                nextQuestion();
-            } else {
-                checkAnswer();
-            }
+            if(document.getElementById('next-btn').style.display === "none") checkAnswer();
+            else nextQuestion();
         }
     });
 </script>
-
 </body>
 </html>

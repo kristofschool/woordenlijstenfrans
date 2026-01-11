@@ -1,0 +1,162 @@
+{
+  "aimer": {
+    "present": ["aime", "aimes", "aime", "aime", "aimons", "aimez", "aiment", "aiment"],
+    "futur_proche": ["vais aimer", "vas aimer", "va aimer", "va aimer", "allons aimer", "allez aimer", "vont aimer", "vont aimer"],
+    "passe_compose": ["ai aimé", "as aimé", "a aimé", "a aimé", "avons aimé", "avez aimé", "ont aimé", "ont aimé"]
+  },
+  "payer": {
+    "present": ["paie", "paies", "paie", "paie", "payons", "payez", "paient", "paient"],
+    "futur_proche": ["vais payer", "vas payer", "va payer", "va payer", "allons payer", "allez payer", "vont payer", "vont payer"],
+    "passe_compose": ["ai payé", "as payé", "a payé", "a payé", "avons payé", "avez payé", "ont payé", "ont payé"]
+  },
+  "préférer": {
+    "present": ["préfère", "préfères", "préfère", "préfère", "préférons", "préférez", "préfèrent", "préfèrent"],
+    "futur_proche": ["vais préférer", "vas préférer", "va préférer", "va préférer", "allons préférer", "allez préférer", "vont préférer", "vont préférer"],
+    "passe_compose": ["ai préféré", "as préféré", "a préféré", "a préféré", "avons préféré", "avez préféré", "ont préféré", "ont préféré"]
+  },
+  "acheter": {
+    "present": ["achète", "achètes", "achète", "achète", "achetons", "achetez", "achètent", "achètent"],
+    "futur_proche": ["vais acheter", "vas acheter", "va acheter", "va acheter", "allons acheter", "allez acheter", "vont acheter", "vont acheter"],
+    "passe_compose": ["ai acheté", "as acheté", "a acheté", "a acheté", "avons acheté", "avez acheté", "ont acheté", "ont acheté"]
+  },
+  "sortir": {
+    "present": ["sors", "sors", "sort", "sort", "sortons", "sortez", "sortent", "sortent"],
+    "futur_proche": ["vais sortir", "vas sortir", "va sortir", "va sortir", "allons sortir", "allez sortir", "vont sortir", "vont sortir"],
+    "passe_compose": ["suis sorti", "es sorti", "est sorti", "est sortie", "sommes sortis", "êtes sortis", "sont sortis", "sont sorties"]
+  },
+  "partir": {
+    "present": ["pars", "pars", "part", "part", "partons", "partez", "partent", "partent"],
+    "futur_proche": ["vais partir", "vas partir", "va partir", "va partir", "allons partir", "allez partir", "vont partir", "vont partir"],
+    "passe_compose": ["suis parti", "es parti", "est parti", "est partie", "sommes partis", "êtes partis", "sont partis", "sont parties"]
+  },
+  "dormir": {
+    "present": ["dors", "dors", "dort", "dort", "dormons", "dormez", "dorment", "dorment"],
+    "futur_proche": ["vais dormir", "vas dormir", "va dormir", "va dormir", "allons dormir", "allez dormir", "vont dormir", "vont dormir"],
+    "passe_compose": ["ai dormi", "as dormi", "a dormi", "a dormi", "avons dormi", "avez dormi", "ont dormi", "ont dormi"]
+  },
+  "venir": {
+    "present": ["viens", "viens", "vient", "vient", "venons", "venez", "viennent", "viennent"],
+    "futur_proche": ["vais venir", "vas venir", "va venir", "va venir", "allons venir", "allez venir", "vont venir", "vont venir"],
+    "passe_compose": ["suis venu", "es venu", "est venu", "est venue", "sommes venus", "êtes venus", "sont venus", "sont venues"]
+  },
+  "attendre": {
+    "present": ["attends", "attends", "attend", "attend", "attendons", "attendez", "attendent", "attendent"],
+    "futur_proche": ["vais attendre", "vas attendre", "va attendre", "va attendre", "allons attendre", "allez attendre", "vont attendre", "vont attendre"],
+    "passe_compose": ["ai attendu", "as attendu", "a attendu", "a attendu", "avons attendu", "avez attendu", "ont attendu", "ont attendu"]
+  },
+  "vendre": {
+    "present": ["vends", "vends", "vend", "vend", "vendons", "vendez", "vendent", "vendent"],
+    "futur_proche": ["vais vendre", "vas vendre", "va vendre", "va vendre", "allons vendre", "allez vendre", "vont vendre", "vont vendre"],
+    "passe_compose": ["ai vendu", "as vendu", "a vendu", "a vendu", "avons vendu", "avez vendu", "ont vendu", "ont vendu"]
+  },
+  "prendre": {
+    "present": ["prends", "prends", "prend", "prend", "prenons", "prenez", "prennent", "prennent"],
+    "futur_proche": ["vais prendre", "vas prendre", "va prendre", "va prendre", "allons prendre", "allez prendre", "vont prendre", "vont prendre"],
+    "passe_compose": ["ai pris", "as pris", "a pris", "a pris", "avons pris", "avez pris", "ont pris", "ont pris"]
+  },
+  "mettre": {
+    "present": ["mets", "mets", "met", "met", "mettons", "mettez", "mettent", "mettent"],
+    "futur_proche": ["vais mettre", "vas mettre", "va mettre", "va mettre", "allons mettre", "allez mettre", "vont mettre", "vont mettre"],
+    "passe_compose": ["ai mis", "as mis", "a mis", "a mis", "avons mis", "avez mis", "ont mis", "ont mis"]
+  },
+  "entendre": {
+    "present": ["entends", "entends", "entend", "entend", "entendons", "entendez", "entendent", "entendent"],
+    "futur_proche": ["vais entendre", "vas entendre", "va entendre", "va entendre", "allons entendre", "allez entendre", "vont entendre", "vont entendre"],
+    "passe_compose": ["ai entendu", "as entendu", "a entendu", "a entendu", "avons entendu", "avez entendu", "ont entendu", "ont entendu"]
+  },
+  "descendre": {
+    "present": ["descends", "descends", "descend", "descend", "descendons", "descendez", "descendent", "descendent"],
+    "futur_proche": ["vais descendre", "vas descendre", "va descendre", "va descendre", "allons descendre", "allez descendre", "vont descendre", "vont descendre"],
+    "passe_compose": ["suis descendu", "es descendu", "est descendu", "est descendue", "sommes descendus", "êtes descendus", "sont descendus", "sont descendues"]
+  },
+  "apprendre": {
+    "present": ["apprends", "apprends", "apprend", "apprend", "apprenons", "apprenez", "apprennent", "apprennent"],
+    "futur_proche": ["vais apprendre", "vas apprendre", "va apprendre", "va apprendre", "allons apprendre", "allez apprendre", "vont apprendre", "vont apprendre"],
+    "passe_compose": ["ai appris", "as appris", "a appris", "a appris", "avons appris", "avez appris", "ont appris", "ont appris"]
+  },
+  "comprendre": {
+    "present": ["comprends", "comprends", "comprend", "comprend", "comprenons", "comprenez", "comprennent", "comprennent"],
+    "futur_proche": ["vais comprendre", "vas comprendre", "va comprendre", "va comprendre", "allons comprendre", "allez comprendre", "vont comprendre", "vont comprendre"],
+    "passe_compose": ["ai compris", "as compris", "a compris", "a compris", "avons compris", "avez compris", "ont compris", "ont compris"]
+  },
+  "être": {
+    "present": ["suis", "es", "est", "est", "sommes", "êtes", "sont", "sont"],
+    "futur_proche": ["vais être", "vas être", "va être", "va être", "allons être", "allez être", "vont être", "vont être"],
+    "passe_compose": ["ai été", "as été", "a été", "a été", "avons été", "avez été", "ont été", "ont été"]
+  },
+  "avoir": {
+    "present": ["ai", "as", "a", "a", "avons", "avez", "ont", "ont"],
+    "futur_proche": ["vais avoir", "vas avoir", "va avoir", "va avoir", "allons avoir", "allez avoir", "vont avoir", "vont avoir"],
+    "passe_compose": ["ai eu", "as eu", "a eu", "a eu", "avons eu", "avez eu", "ont eu", "ont eu"]
+  },
+  "aller": {
+    "present": ["vais", "vas", "va", "va", "allons", "allez", "vont", "vont"],
+    "futur_proche": ["vais aller", "vas aller", "va aller", "va aller", "allons aller", "allez aller", "vont aller", "vont aller"],
+    "passe_compose": ["suis allé", "es allé", "est allé", "est allée", "sommes allés", "êtes allés", "sont allés", "sont allées"]
+  },
+  "faire": {
+    "present": ["fais", "fais", "fait", "fait", "faisons", "faites", "font", "font"],
+    "futur_proche": ["vais faire", "vas faire", "va faire", "va faire", "allons faire", "allez faire", "vont faire", "vont faire"],
+    "passe_compose": ["ai fait", "as fait", "a fait", "a fait", "avons fait", "avez fait", "ont fait", "ont fait"]
+  },
+  "pouvoir": {
+    "present": ["peux", "peux", "peut", "peut", "pouvons", "pouvez", "peuvent", "peuvent"],
+    "futur_proche": ["vais pouvoir", "vas pouvoir", "va pouvoir", "va pouvoir", "allons pouvoir", "allez pouvoir", "vont pouvoir", "vont pouvoir"],
+    "passe_compose": ["ai pu", "as pu", "a pu", "a pu", "avons pu", "avez pu", "ont pu", "ont pu"]
+  },
+  "vouloir": {
+    "present": ["veux", "veux", "veut", "veut", "voulons", "voulez", "veulent", "veulent"],
+    "futur_proche": ["vais vouloir", "vas vouloir", "va vouloir", "va vouloir", "allons vouloir", "allez vouloir", "vont vouloir", "vont vouloir"],
+    "passe_compose": ["ai voulu", "as voulu", "a voulu", "a voulu", "avons voulu", "avez voulu", "ont voulu", "ont voulu"]
+  },
+  "devoir": {
+    "present": ["dois", "dois", "doit", "doit", "devons", "devez", "doivent", "doivent"],
+    "futur_proche": ["vais devoir", "vas devoir", "va devoir", "va devoir", "allons devoir", "allez devoir", "vont devoir", "vont devoir"],
+    "passe_compose": ["ai dû", "as dû", "a dû", "a dû", "avons dû", "avez dû", "ont dû", "ont dû"]
+  },
+  "voir": {
+    "present": ["vois", "vois", "voit", "voit", "voyons", "voyez", "voient", "voient"],
+    "futur_proche": ["vais voir", "vas voir", "va voir", "va voir", "allons voir", "allez voir", "vont voir", "vont voir"],
+    "passe_compose": ["ai vu", "as vu", "a vu", "a vu", "avons vu", "avez vu", "ont vu", "ont vu"]
+  },
+  "savoir": {
+    "present": ["sais", "sais", "sait", "sait", "savons", "savez", "savent", "savent"],
+    "futur_proche": ["vais savoir", "vas savoir", "va savoir", "va savoir", "allons savoir", "allez savoir", "vont savoir", "vont savoir"],
+    "passe_compose": ["ai su", "as su", "a su", "a su", "avons su", "avez su", "ont su", "ont su"]
+  },
+  "ouvrir": {
+    "present": ["ouvre", "ouvres", "ouvre", "ouvre", "ouvrons", "ouvrez", "ouvrent", "ouvrent"],
+    "futur_proche": ["vais ouvrir", "vas ouvrir", "va ouvrir", "va ouvrir", "allons ouvrir", "allez ouvrir", "vont ouvrir", "vont ouvrir"],
+    "passe_compose": ["ai ouvert", "as ouvert", "a ouvert", "a ouvert", "avons ouvert", "avez ouvert", "ont ouvert", "ont ouvert"]
+  },
+  "lire": {
+    "present": ["lis", "lis", "lit", "lit", "lisons", "lisez", "lisent", "lisent"],
+    "futur_proche": ["vais lire", "vas lire", "va lire", "va lire", "allons lire", "allez lire", "vont lire", "vont lire"],
+    "passe_compose": ["ai lu", "as lu", "a lu", "a lu", "avons lu", "avez lu", "ont lu", "ont lu"]
+  },
+  "dire": {
+    "present": ["dis", "dis", "dit", "dit", "disons", "dites", "disent", "disent"],
+    "futur_proche": ["vais dire", "vas dire", "va dire", "va dire", "allons dire", "allez dire", "vont dire", "vont dire"],
+    "passe_compose": ["ai dit", "as dit", "a dit", "a dit", "avons dit", "avez dit", "ont dit", "ont dit"]
+  },
+  "se lever": {
+    "present": ["me lève", "te lèves", "se lève", "se lève", "nous levons", "vous levez", "se lèvent", "se lèvent"],
+    "futur_proche": ["vais me lever", "vas te lever", "va se lever", "va se lever", "allons nous lever", "allez vous levez", "vont se lever", "vont se lever"],
+    "passe_compose": ["me suis levé", "te es levé", "se est levé", "se est levée", "nous sommes levés", "vous êtes levés", "se sont levés", "se sont levées"]
+  },
+  "se laver": {
+    "present": ["me lave", "te laves", "se lave", "se lave", "nous lavons", "vous lavez", "se lavent", "se lavent"],
+    "futur_proche": ["vais me laver", "vas te laver", "va se laver", "va se laver", "allons nous laver", "allez vous laver", "vont se laver", "vont se laver"],
+    "passe_compose": ["me suis lavé", "te es lavé", "se est lavé", "se est lavée", "nous sommes lavés", "vous êtes lavés", "se sont lavés", "se sont levées"]
+  },
+  "s'appeler": {
+    "present": ["m'appelle", "t'appelles", "s'appelle", "s'appelle", "nous appelons", "vous appelez", "s'appellent", "s'appellent"],
+    "futur_proche": ["vais m'appeler", "vas t'appeler", "va s'appeler", "va s'appeler", "allons nous appeler", "allez vous appeler", "vont s'appeler", "vont s'appeler"],
+    "passe_compose": ["me suis appelé", "te es appelé", "se est appelé", "se est appelée", "nous sommes appelés", "vous êtes appelés", "se sont appelés", "se sont appelées"]
+  },
+  "s'habiller": {
+    "present": ["m'habille", "t'habilles", "s'habille", "s'habille", "nous habillons", "vous habillez", "s'habillent", "s'habillent"],
+    "futur_proche": ["vais m'habiller", "vas t'habiller", "va s'habiller", "va s'habiller", "allons nous habiller", "allez vous habiller", "vont s'habiller", "vont s'habiller"],
+    "passe_compose": ["me suis habillé", "te es habillé", "se est habillé", "se est habillée", "nous sommes habillés", "vous êtes habillés", "se sont habillés", "se sont habillées"]
+  }
+}

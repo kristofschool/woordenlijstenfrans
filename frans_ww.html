@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franse Werkwoorden Trainer</title>
+    <style>
+        :root { --primary: #007bff; --success: #28a745; --danger: #dc3545; }
+        body { font-family: 'Segoe UI', sans-serif; display: flex; flex-direction: column; align-items: center; background-color: #f0f2f5; margin: 0; padding: 20px; }
+        .container { max-width: 600px; width: 100%; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; }
+        .hidden { display: none; }
+        
+        /* Selectie Sectie */
+        .selection-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: left; margin: 20px 0; }
+        .option-group { border: 1px solid #ddd; padding: 10px; border-radius: 8px; }
+        .option-group h3 { margin-top: 0; font-size: 1rem; color: var(--primary); }
+
+        /* Kaart & Input */
+        .display-area { min-height: 250px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .question-box { font-size: 1.5rem; margin-bottom: 20px; }
+        .answer-input { padding: 12px; font-size: 1.2rem; width: 80%; border: 2px solid #ccc; border-radius: 8px; margin-bottom: 10px; text-align: center; }
+        .answer-input.correct { border-color: var(--success); background-color: #e8f5e9; }
+        .answer-input.wrong { border-color: var(--danger); background-color: #ffebee; }
+
+        /* Virtueel Toetsenbord */
+        .keyboard { display: flex; gap: 5px; justify-content: center; margin-bottom: 20px; flex-wrap: wrap; }
+        .key { padding: 10px 15px; background: #eee; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        .key:hover { background: #ddd; }
+
+        /* Knoppen */
+        button { padding: 12px 24px; font-size: 1rem; cursor: pointer; border-radius: 8px; border: none; margin: 5px; }
+        .btn-start { background: var(--success); color: white; width: 100%; }
+        .btn-check { background: var(--primary); color: white; }
+        .btn-next { background: #6c757d; color: white; }
+        
+        .feedback { font-weight: bold; margin-bottom: 10px; min-height: 1.2em; }
+    </style>
+</head>
+<body>
+
+<div class="container" id="setup-screen">
+    <h1>🇫🇷 Instellingen</h1>
+    <div class="selection-grid">
+        <div class="option-group">
+            <h3>Werkwoorden</h3>
+            <label><input type="checkbox" class="verb-check" value="être" checked> Être</label><br>
+            <label><input type="checkbox" class="verb-check" value="avoir" checked> Avoir</label><br>
+            <label><input type="checkbox" class="verb-check" value="parler"> Parler</label>
+        </div>
+        <div class="option-group">
+            <h3>Modus</h3>
+            <label><input type="radio" name="mode" value="flashcard" checked> Flashcard</label><br>
+            <label><input type="radio" name="mode" value="type"> Typen</label>
+        </div>
+    </div>
+    <button class="btn-start" onclick="startPractice()">Start Oefenen</button>
+</div>
+
+<div class="container hidden" id="practice-screen">
+    <div id="practice-info" style="color: #666; margin-bottom: 10px;"></div>
+    
+    <div class="display-area">
+        <div class="question-box">
+            <span id="subject-display" style="font-weight: bold;"></span> 
+            <span id="verb-display" style="font-style: italic; color: #666;"></span>
+        </div>
+
+        <div id="typing-area" class="hidden">
+            <div class="feedback" id="feedback"></div>
+            <input type="text" id="answer-input" class="answer-input" autocomplete="off" placeholder="Typ je antwoord...">
+            <div class="keyboard">
+                <div class="key" onclick="addChar('é')">é</div>
+                <div class="key" onclick="addChar('è')">è</div>
+                <div class="key" onclick="addChar('à')">à</div>
+                <div class="key" onclick="addChar('â')">â</div>
+                <div class="key" onclick="addChar('ê')">ê</div>
+                <div class="key" onclick="addChar('î')">î</div>
+                <div class="key" onclick="addChar('ô')">ô</div>
+                <div class="key" onclick="addChar('û')">û</div>
+                <div class="key" onclick="addChar('ç')">ç</div>
+                <div class="key" onclick="addChar('ë')">ë</div>
+                <div class="key" onclick="addChar('ï')">ï</div>
+            </div>
+            <button class="btn-check" id="check-btn" onclick="checkAnswer()">Controleer</button>
+        </div>
+
+        <div id="flashcard-area" class="hidden">
+            <div id="flash-answer" style="font-size: 2rem; color: var(--primary); margin-bottom: 20px; visibility: hidden;">--</div>
+            <button class="btn-check" onclick="showFlashAnswer()">Toon Antwoord</button>
+        </div>
+    </div>
+
+    <button class="btn-next" onclick="nextQuestion()">Volgende Kaart</button>
+    <button style="background:none; color: #999; text-decoration: underline;" onclick="location.reload()">Instellingen wijzigen</button>
+</div>
+
+<script>
+    const verbData = {
+        "être": { present: ["suis", "es", "est", "sommes", "êtes", "sont"] },
+        "avoir": { present: ["ai", "as", "a", "avons", "avez", "ont"] },
+        "parler": { present: ["parle", "parles", "parle", "parlons", "parlez", "parlent"] }
+    };
+    const subjects = ["Je / J'", "Tu", "Il / Elle / On", "Nous", "Vous", "Ils / Elles"];
+    
+    let currentVerb, currentTense, currentSubIndex, currentAnswer, mode;
+
+    function startPractice() {
+        const selectedVerbs = Array.from(document.querySelectorAll('.verb-check:checked')).map(cb => cb.value);
+        mode = document.querySelector('radio[name="mode"]:checked')?.value || document.querySelector('input[name="mode"]:checked').value;
+
+        if (selectedVerbs.length === 0) return alert("Selecteer een werkwoord!");
+
+        document.getElementById('setup-screen').classList.add('hidden');
+        document.getElementById('practice-screen').classList.remove('hidden');
+        
+        if(mode === 'type') document.getElementById('typing-area').classList.remove('hidden');
+        else document.getElementById('flashcard-area').classList.remove('hidden');
+
+        window.activeVerbs = selectedVerbs;
+        nextQuestion();
+    }
+
+    function nextQuestion() {
+        resetUI();
+        currentVerb = window.activeVerbs[Math.floor(Math.random() * window.activeVerbs.length)];
+        currentSubIndex = Math.floor(Math.random() * subjects.length);
+        currentAnswer = verbData[currentVerb]["present"][currentSubIndex];
+
+        document.getElementById('practice-info').innerText = "Tijd: Présent";
+        document.getElementById('subject-display').innerText = subjects[currentSubIndex];
+        document.getElementById('verb-display').innerText = `(${currentVerb})`;
+        
+        if(mode === 'flashcard') {
+            document.getElementById('flash-answer').innerText = currentAnswer;
+        }
+    }
+
+    function resetUI() {
+        const input = document.getElementById('answer-input');
+        input.value = "";
+        input.className = "answer-input";
+        document.getElementById('feedback').innerText = "";
+        document.getElementById('flash-answer').style.visibility = "hidden";
+    }
+
+    function addChar(char) {
+        const input = document.getElementById('answer-input');
+        input.value += char;
+        input.focus();
+    }
+
+    function checkAnswer() {
+        const input = document.getElementById('answer-input');
+        const userAnsw = input.value.trim().toLowerCase();
+        const feedback = document.getElementById('feedback');
+
+        if (userAnsw === currentAnswer.toLowerCase()) {
+            input.className = "answer-input correct";
+            feedback.innerText = "Correct! 🎉";
+            feedback.style.color = "var(--success)";
+        } else {
+            input.className = "answer-input wrong";
+            feedback.innerText = `Helaas! Het was: ${currentAnswer}`;
+            feedback.style.color = "var(--danger)";
+        }
+    }
+
+    function showFlashAnswer() {
+        document.getElementById('flash-answer').style.visibility = "visible";
+    }
+
+    // Enter toets ondersteuning
+    document.getElementById('answer-input').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') checkAnswer();
+    });
+</script>
+
+</body>
+</html>

@@ -18,6 +18,7 @@
         .verb-selection-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; max-height: 200px; overflow-y: auto; border: 1px solid #eee; padding: 10px; border-radius: 8px; background: #fff; }
         .verb-item { font-size: 0.85rem; display: flex; align-items: center; gap: 5px; cursor: pointer; }
 
+        /* Progress Bar - Nu altijd bovenin het oefenscherm */
         .progress-container { width: 100%; background: #eee; border-radius: 10px; height: 10px; margin-bottom: 20px; overflow: hidden; }
         .progress-bar { height: 100%; background: var(--success); width: 0%; transition: width 0.3s; }
 
@@ -40,11 +41,8 @@
         .btn-check { background: var(--primary); color: white; width: 100%; }
         #next-btn { background: #333; color: white; margin-top: 15px; display: none; }
 
-        /* Rapport Styling */
         .error-list { text-align: left; margin-top: 20px; border-top: 2px solid #eee; padding-top: 20px; }
         .error-item { margin-bottom: 10px; padding: 10px; background: #fff5f5; border-radius: 8px; border-left: 4px solid var(--danger); font-size: 0.9rem; }
-        .error-item b { color: var(--danger); }
-        .error-item i { color: #666; }
     </style>
 </head>
 <body>
@@ -82,7 +80,16 @@
             <label><input type="radio" name="mode" value="type" checked> Typen</label><br>
             <label><input type="radio" name="mode" value="flashcard"> Flashcards</label>
             <hr>
-            Vragen: <input type="number" id="question-limit" value="10" min="1" max="50" style="width: 45px;">
+            <label><input type="checkbox" id="random-order" checked> Willekeurige volgorde</label>
+            <hr>
+            Aantal vragen: 
+            <select id="question-limit">
+                <option value="all">Allemaal</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+            </select>
         </div>
     </div>
     <button class="btn-start" onclick="startPractice()">Start Training</button>
@@ -122,9 +129,10 @@
 
 <script>
     let fullVerbData = {}, selectedVerbs = [], selectedTenses = [], currentAnswer = "", mode = "type";
-    let questionsDone = 0, totalQuestions = 10, correctAnswers = 0;
-    let sessionErrors = []; // Om fouten bij te houden
+    let questionsDone = 0, totalQuestions = 0, correctAnswers = 0;
+    let sessionErrors = [];
     let currentVerb = "", currentTense = "", currentSubject = "";
+    let questionPool = []; // Lijst met alle mogelijke vraag-combinaties
 
     const subjects = ["Je", "Tu", "Il", "Elle", "Nous", "Vous", "Ils", "Elles"];
     const accents = ['é', 'è', 'à', 'â', 'ê', 'î', 'ô', 'û', 'ç', 'ë', 'ï'];
@@ -151,7 +159,7 @@
             });
             document.getElementById('verb-list-container').classList.remove('hidden');
             updateCount();
-        } catch (e) { alert("Kon bestand niet laden."); }
+        } catch (e) { alert("Kon bestand niet laden. Check de naam op GitHub."); }
     }
 
     function updateCount() {
@@ -164,16 +172,40 @@
     }
 
     function startPractice() {
-        selectedVerbs = Array.from(document.querySelectorAll('.verb-select:checked')).map(cb => cb.value);
-        selectedTenses = Array.from(document.querySelectorAll('.tense-check:checked')).map(cb => cb.value);
+        const checkedVerbs = Array.from(document.querySelectorAll('.verb-select:checked')).map(cb => cb.value);
+        const checkedTenses = Array.from(document.querySelectorAll('.tense-check:checked')).map(cb => cb.value);
         mode = document.querySelector('input[name="mode"]:checked').value;
-        totalQuestions = parseInt(document.getElementById('question-limit').value);
+        const limitVal = document.getElementById('question-limit').value;
+        const isRandom = document.getElementById('random-order').checked;
 
-        if (selectedVerbs.length === 0 || selectedTenses.length === 0) return alert("Maak een selectie.");
+        if (checkedVerbs.length === 0 || checkedTenses.length === 0) return alert("Selecteer werkwoorden en tijden.");
+
+        // Maak een pool van alle mogelijke vragen (werkwoord x tijd x onderwerp)
+        questionPool = [];
+        checkedVerbs.forEach(v => {
+            checkedTenses.forEach(t => {
+                for(let i=0; i<8; i++) {
+                    questionPool.push({v, t, sIdx: i});
+                }
+            });
+        });
+
+        // Schud de pool als random aan staat
+        if (isRandom) {
+            questionPool.sort(() => Math.random() - 0.5);
+        }
+
+        // Bepaal het totaal aantal vragen
+        if (limitVal === "all") {
+            totalQuestions = questionPool.length;
+        } else {
+            totalQuestions = Math.min(parseInt(limitVal), questionPool.length);
+        }
 
         document.getElementById('setup-screen').classList.add('hidden');
         document.getElementById('practice-screen').classList.remove('hidden');
         if(mode === 'type') document.getElementById('type-ui').classList.remove('hidden');
+        
         nextQuestion();
     }
 
@@ -187,16 +219,19 @@
     function nextQuestion() {
         if (questionsDone >= totalQuestions) return showResults();
         
+        // Update progress bar aan het begin van elke vraag
+        document.getElementById('progress-bar').style.width = (questionsDone / totalQuestions * 100) + "%";
+
         const card = document.getElementById('card-inner');
         card.classList.remove('is-flipped');
 
         setTimeout(() => {
-            currentVerb = selectedVerbs[Math.floor(Math.random() * selectedVerbs.length)];
-            currentTense = selectedTenses[Math.floor(Math.random() * selectedTenses.length)];
-            const subIdx = Math.floor(Math.random() * 8);
+            const q = questionPool[questionsDone];
+            currentVerb = q.v;
+            currentTense = q.t;
+            const subIdx = q.sIdx;
             currentAnswer = fullVerbData[currentVerb][currentTense][subIdx];
 
-            // ELISIE LOGICA (Je -> J')
             currentSubject = subjects[subIdx];
             const klinkers = ['a', 'e', 'i', 'o', 'u', 'y', 'h', 'é', 'è', 'â'];
             if (subIdx === 0 && klinkers.includes(currentAnswer.toLowerCase().charAt(0))) {
@@ -208,7 +243,6 @@
             document.getElementById('verb-display').innerText = `(${currentVerb})`;
             document.getElementById('card-back-text').innerText = currentAnswer;
             
-            document.getElementById('progress-bar').style.width = (questionsDone / totalQuestions * 100) + "%";
             document.getElementById('answer-input').value = "";
             document.getElementById('answer-input').className = "answer-input";
             document.getElementById('feedback').innerText = "";
@@ -228,7 +262,6 @@
         } else {
             input.className = "answer-input wrong";
             document.getElementById('feedback').innerHTML = `Fout. Het is: <span style="color:var(--primary)">${currentAnswer}</span>`;
-            // Fout opslaan voor rapport
             sessionErrors.push({
                 q: `${currentSubject}${currentSubject === "J'" ? "" : " "} (${currentVerb}, ${currentTense})`,
                 a: currentAnswer,
@@ -241,28 +274,49 @@
     }
 
     function showResults() {
-        document.getElementById('practice-screen').classList.add('hidden');
-        document.getElementById('result-screen').classList.remove('hidden');
-        document.getElementById('final-score').innerText = `${correctAnswers} / ${totalQuestions}`;
+        // Zorg dat de bar op 100% staat aan het einde
+        document.getElementById('progress-bar').style.width = "100%";
         
-        const reportDiv = document.getElementById('error-report');
-        if (sessionErrors.length > 0) {
-            reportDiv.innerHTML = "<h3>Overzicht van foutjes:</h3>";
-            sessionErrors.forEach(err => {
-                const div = document.createElement('div');
-                div.className = "error-item";
-                div.innerHTML = `Vraag: <i>${err.q}</i><br>Jouw antwoord: <s>${err.u}</s><br><b>Correct antwoord: ${err.a}</b>`;
-                reportDiv.appendChild(div);
-            });
-        } else {
-            reportDiv.innerHTML = "<h3>Perfect gedaan! Geen enkele fout. 🏆</h3>";
-        }
+        setTimeout(() => {
+            document.getElementById('practice-screen').classList.add('hidden');
+            document.getElementById('result-screen').classList.remove('hidden');
+            
+            // Score berekening voor flashcards vs type
+            if (mode === 'flashcard') {
+                document.getElementById('final-score').innerText = `Klaar! Je bekeek ${totalQuestions} kaarten.`;
+            } else {
+                document.getElementById('final-score').innerText = `${correctAnswers} / ${totalQuestions}`;
+            }
+            
+            const reportDiv = document.getElementById('error-report');
+            if (mode === 'type' && sessionErrors.length > 0) {
+                reportDiv.innerHTML = "<h3>Overzicht van foutjes:</h3>";
+                sessionErrors.forEach(err => {
+                    const div = document.createElement('div');
+                    div.className = "error-item";
+                    div.innerHTML = `Vraag: <i>${err.q}</i><br>Jouw: <s>${err.u}</s> | <b>Correct: ${err.a}</b>`;
+                    reportDiv.appendChild(div);
+                });
+            } else if (mode === 'type') {
+                reportDiv.innerHTML = "<h3>Perfect gedaan! 🏆</h3>";
+            } else {
+                reportDiv.innerHTML = "";
+            }
+        }, 500);
     }
 
     document.getElementById('answer-input').addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
             if(document.getElementById('next-btn').style.display === "none" && mode === 'type') checkAnswer();
-            else nextQuestion();
+            else if (document.getElementById('next-btn').style.display !== "none" || mode === 'flashcard') {
+                // In flashcard mode telt enter ook als 'volgende' als de kaart geflipt is
+                if (mode === 'flashcard' && !document.getElementById('card-inner').classList.contains('is-flipped')) {
+                    toggleFlip();
+                } else {
+                    if (mode === 'flashcard') questionsDone++; // Handmatige ophoging voor flashcards
+                    nextQuestion();
+                }
+            }
         }
     });
 </script>
